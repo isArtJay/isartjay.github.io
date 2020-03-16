@@ -1,0 +1,518 @@
+I"BK<h1 id="伪类">伪类</h1>
+
+<p>一个 CSS 伪类是以一个冒号（ : ）作为前缀，被添加到一个选择器末尾的关键字，可以让指定的元素在特定的状态呈现指定的样式。例如 :hover，当用户悬停在指定元素时，可以在这个状态给指定元素添加相应的样式，是在 DOM 树无法描述的状态下才能给元素添加样式。</p>
+
+<p>首先，下方的正方形都没有背景色：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/1.png" alt="" /></p>
+
+<h2 id="1first-child">1、:first-child</h2>
+
+<p>:first-child  表示在一组兄弟元素中的第一个元素</p>
+
+<pre><code class="language-html">/* 所有正方形都没有背景色，因为此时选中的是 &lt;p&gt; 标签*/
+&lt;div class="list"&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:first-child{
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/2.png" alt="img" /></p>
+
+<pre><code class="language-html">/* 第 1 个正方形有背景色，因为此时选中的是第一个 .square */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:first-child{
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/3.png" alt="img" /></p>
+
+<h2 id="2first-of-type">2、:first-of-type</h2>
+
+<p>:first-of-type 表示一组兄弟元素中指定类型的第一个元素</p>
+
+<pre><code class="language-html">/* :first-of-type 选择在父元素中第一个出现的 .square
+而不管其在兄弟内的位置如何，第一个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:first-of-type{
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/4.png" alt="img" /></p>
+
+<h2 id="3last-child">3、:last-child</h2>
+
+<p>:last-child 表示在一组兄弟元素中的最后一个元素（类似 :first-child）</p>
+
+<pre><code class="language-html">/* :last-child 此时选中的是最后一个 .square
+最后一个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:last-child{
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/5.png" alt="img" /></p>
+
+<h2 id="4last-of-type">4、:last-of-type</h2>
+
+<p>:last-of-type 表示一组兄弟元素中指定类型的最后一个元素（类似 :first-of-type）</p>
+
+<pre><code class="language-html">/* :last-of-type 选择在父元素中最后一个出现的 .square
+而不管其在兄弟内的位置如何，最后一个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:last-of-type{
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/6.png" alt="img" /></p>
+
+<h2 id="5not">5、:not</h2>
+
+<p>:not 一个否定伪类，用于匹配不符合参数选择器的元素</p>
+
+<pre><code class="language-html">/* 不含有 .not 的正方形有背景色*/
+&lt;div class="list"&gt;
+     &lt;div class="square not"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square not"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:not(.not){
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/7.png" alt="img" /></p>
+
+<h2 id="6nth-childanb">6、:nth-child(an+b)</h2>
+
+<p>:nth-child 这个 CSS 伪类首先会找到当前元素的兄弟元素，然后按照位置的先后顺序从1开始排序，选择的结果为第（an+b）个元素的集合（n=0，1，2，3…）。如果 an+b 为 0，无法选中任何元素</p>
+
+<h3 id="6-1nth-child4-匹配位置为-4-的元素">6-1、:nth-child(4) 匹配位置为 4 的元素</h3>
+
+<pre><code class="language-html">/*第 3 个正方形有背景色 因为第 3 个正方形在所有兄弟元素中排第 4 */
+&lt;div class="list"&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-child(4) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/8.png" alt="img" /></p>
+
+<pre><code class="language-html"> /*此时第 4 个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-child(4) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/9.png" alt="img" /></p>
+
+<h3 id="6-2nth-child2n-匹配位置为2-468-的元素可以使用-nth-childeven-代替">6-2、:nth-child(2n) 匹配位置为2、 4、6、8… 的元素，可以使用 :nth-child(even) 代替</h3>
+
+<pre><code class="language-html">/*第 2、 4、6、8 个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-child(2n) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/10.png" alt="img" /></p>
+
+<h3 id="6-3nth-child2n1-匹配位置为1-357-的元素可以使用-nth-childodd-代替">6-3、:nth-child(2n+1) 匹配位置为1、 3、5、7… 的元素，可以使用 :nth-child(odd) 代替</h3>
+
+<pre><code class="language-html">/*第 1、 3、5、7 个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-child(2n+1) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/11.png" alt="img" /></p>
+
+<h3 id="6-4nth-child3n-匹配位置为-369-的元素">6-4、:nth-child(3n) 匹配位置为 3、6、9… 的元素</h3>
+
+<pre><code class="language-html">/*第 3、6 个正方形有背景色 */
+&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-child(3n) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/12.png" alt="img" /></p>
+
+<h2 id="7nth-of-typeanb">7、:nth-of-type(an+b)</h2>
+
+<p>:nth-of-type 与 nth-child 相似，不同之处在于它是只匹配特定类型的元素</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt; 
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-of-type(4) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/13.png" alt="img" /></p>
+
+<h2 id="8nth-last-childanb">8、:nth-last-child(an+b)</h2>
+
+<p>:nth-last-child 与 nth-child 相似，它是从最后一个子元素开始计数的</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-last-child(4) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/14.png" alt="img" /></p>
+
+<h2 id="9nth-last-of-type">9、:nth-last-of-type</h2>
+
+<p>:nth-last-of-type 与 nth-of-type 相似，不同之处在于它是从最后一个子元素开始计数的</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.square:nth-last-of-type(4) {
+     background: orangered;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/15.png" alt="img" /></p>
+
+<h1 id="伪元素">伪元素</h1>
+
+<p>伪元素的前缀是两个冒号 ( :: ) ， 同样是添加到选择器后面去选择某个元素的某个部分。伪元素创建了不存在 DOM 树中的元素，并为其添加样式。例如，::after 选择元素后，在其内容后使用 content 添加内容。虽然可以看到添加的内容，但是这些内容实际上不存在 DOM 树中</p>
+
+<h2 id="1afterafter">1、::after(:after)</h2>
+
+<p>使用 ::after 会创建一个伪元素，该伪元素会成为选中元素的最后一个子元素</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">p::after{
+     content: "✨✨";
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/16.png" alt="img" /></p>
+
+<h2 id="2beforebefore">2、::before(:before)</h2>
+
+<p>使用 ::before 会创建一个伪元素，该伪元素会成为选中元素的最后一个子元素</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">p::before{
+     content: "✨✨";
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/17.png" alt="img" /></p>
+
+<h2 id="3first-letterfirst-letter">3、::first-letter(:first-letter)</h2>
+
+<p>::first-letter 选中某块级元素第一行的第一个字母，并且文字所处的行之前没有其他内容</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">p::first-letter{
+     color: red;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/18.png" alt="img" /></p>
+
+<h2 id="4first-linefirst-line">4、::first-line(:first-line)</h2>
+
+<p>::first-line 在某块级元素的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。和其他所有的伪元素一样，::first-line 不能匹配任何真实存在的 html 元素。::first-line 伪元素只能在块容器中，所以，::first-line 伪元素只能在一个 display 值为 block,，inline-block，table-cell 或者 table-caption 中有用</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">p::first-line{
+     color: red;
+}
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/19.png" alt="img" /></p>
+
+<h2 id="5selection">5、::selection</h2>
+
+<p>::selection 用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）</p>
+
+<pre><code class="language-html">&lt;div class="list"&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;div class="square"&gt;&lt;/div&gt;
+     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">p::selection{
+     background-color: #ffeb3b;
+}
+</code></pre>
+
+<p>使用鼠标选中亮字，效果图：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/20.png" alt="img" /></p>
+
+<h1 id="兼容性">兼容性</h1>
+
+<h2 id="伪类的兼容性">伪类的兼容性：</h2>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/21.png" alt="img" /></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/22.png" alt="img" /></p>
+
+<h2 id="伪元素的兼容性">伪元素的兼容性：</h2>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/23.png" alt="img" /></p>
+
+<blockquote>
+  <p><em><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements">参考文章</a></em></p>
+
+  <p><em><a href="https://caniuse.com">元素兼容性查看</a></em></p>
+</blockquote>
+:ET

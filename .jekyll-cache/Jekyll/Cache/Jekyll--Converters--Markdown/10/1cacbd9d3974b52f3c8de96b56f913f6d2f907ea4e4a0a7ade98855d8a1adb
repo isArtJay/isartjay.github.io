@@ -1,0 +1,193 @@
+I"�)<p>如果你不熟悉编码语言，却殷切希望拥有一个独立的个人博客，请仔细阅读这篇文章。</p>
+
+<h1 id="一为什么要建立自己的博客">一、为什么要建立自己的博客？</h1>
+
+<h2 id="1提高将事情讲清楚的能力">1、提高将事情讲清楚的能力</h2>
+
+<blockquote>
+  <p>很多东西你以为懂了，但当你在写下来的时候，你就觉得无从下手了。</p>
+</blockquote>
+
+<h2 id="2积累更多的知识">2、积累更多的知识</h2>
+
+<blockquote>
+  <p>写并不是单纯的写，例如你突然忘记了一个概念，于是上网找，找回来这个概念的时候，你重温这个概念，可能还会顺便看了一下关于这个概念的其他东西。</p>
+
+</blockquote>
+
+<h2 id="3分享带来的连锁反应">3、分享带来的连锁反应</h2>
+
+<blockquote>
+  <p>看到你作品的人越多，回报就越高。当然，如果你愿意，你也可以保留所有权，但是我很乐于分享。</p>
+</blockquote>
+
+<h2 id="4记录成长">4、记录成长</h2>
+
+<blockquote>
+  <p>你会发现自己正在通过这样的方式在不断的成长，这种成长是一种财富，你得到了收获，不断修正自己的错误，别人得到了指引，避免走弯路。</p>
+</blockquote>
+
+<h2 id="5探索未知的世界">5、探索未知的世界</h2>
+
+<blockquote>
+  <p>通过写博客，你会知道世界上还有很多人像你一样在写博客，这些人和知识正在世界的某个角落等着你。</p>
+</blockquote>
+
+<h2 id="6一个人在做一件属于自己的事">6、一个人在做一件属于自己的事</h2>
+
+<blockquote>
+  <p>如果你想要清晰地思考，就必须远离人群。</p>
+</blockquote>
+
+<h2 id="7互联网上的身份证">7、互联网上的身份证</h2>
+
+<blockquote>
+  <p>一个长期的有价值的博客是一份很好的简历，你的博客价值越高，你结识的人就越牛，跟牛人交流又会让你的眼界得到极大的开阔，于是你就变得更牛… 这是一个良性循环。</p>
+</blockquote>
+
+<h1 id="二开始搭建博客">二、开始搭建博客</h1>
+
+<p><a href="https://baike.baidu.com/item/GitHub">什么是GitHub ?</a>，这里我就不赘述了。它有一个很好的项目：<a href="https://pages.github.com/">GitHub Pages</a>，这个项目可以让开发者建立一个私人页面，上面可以分享新颖的想法和自己的代码、项目等。通过 GitHub Pages 创建个人博客的好处有很多，比如：无广告、免费、维护成本低、不用买主机等。下边请跟我一起看看怎么在 GitHub Pages 创建自己的个人博客。</p>
+
+<h2 id="1创建仓库">1、创建仓库</h2>
+
+<p>如果你没有 GitHub 账号的话，可以先去<a href="https://github.com/join">注册</a>。首先，创建一个新的仓库，名称格式为：<u>你的GitHub用户名.github.io</u>。比如我的 GitHub 用户名为isArtJay，那么我创建的仓库名就是： isArtJay.github.io</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog01.png" alt="创建仓库" /></p>
+
+<h2 id="2购买域名">2、购买域名</h2>
+
+<p>推荐你去 <a href="https://sg.godaddy.com/zh/">GoDaddy</a> 上购买域名，在这上边购买的好处就是不需要各种审核。当然你也可以去<a href="https://wanwang.aliyun.com/?spm=5176.12825654.eofdhaal5.77.e9392c4azYxgds&amp;aly_as=Y4AFdXxT">阿里云</a>或者<a href="https://dnspod.cloud.tencent.com/">腾讯云</a>。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog02.png" alt="购买域名" /></p>
+
+<p>输入域名查看是否可用，这里以 isartjay.com 为例。注意：这里的 HK 是港元。</p>
+
+<p>进入购物车后会显示一些增值项目，这个可以不买。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog03.png" alt="购买增值项目" /></p>
+
+<p>另外，不建议购买 GoDaddy 的虚拟主机服务，很容易被墙。</p>
+
+<h2 id="3开启github-pages">3、开启GitHub Pages</h2>
+
+<p>点击 Settings，进入设置。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog04.png" alt="进入设置" /></p>
+
+<p>进入设置后往下翻，找到 GitHub Pages -&gt; Theme Choose，点击 Choose a theme 选择一个主题。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog05.png" alt="选择主题" /></p>
+
+<p>选择一个主题后，点击 Select theme</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog06.png" alt="选择主题" /></p>
+
+<p>你可以先预览一下页面，实际上最后做出的效果会比这个好几十倍，但你可以先确认一下页面能不能正常显示。</p>
+
+<p>继续往下看吧。</p>
+
+<h2 id="4绑定域名">4、绑定域名</h2>
+
+<p>再次进入设置，找到 GitHub Pages -&gt; Custom domain，填入你购买的域名，点击 Save 保存</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog07.png" alt="绑定域名" /></p>
+
+<p>这个操作等同于在你的项目根目录下创建一个名为 CNAME 的文件，文件内容为你的域名。</p>
+
+<p>然后回到 GoDaddy 的主页上，点击个人用户名，再点击管理域名进入域名的列表页面。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog08.png" alt="管理域名" /></p>
+
+<p>点击管理DNS</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog09.png" alt="管理DNS" /></p>
+
+<h2 id="5创建a记录">5、创建A记录</h2>
+
+<p>添加一条指向 185.199.108.153 的A记录。<a href="https://help.github.com/cn/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">官方说明</a></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog10.png" alt="添加记录A" /></p>
+
+<h2 id="6创建cname记录">6、创建CNAME记录</h2>
+
+<p>添加一条指向 <u>你的GitHub用户名.github.io</u>（开始时你创建的仓库名）的CNAME记录。比如我的是 isartjay.github.io</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog11.png" alt="添加记录CNAME" /></p>
+
+<p>更改这么多就够了，其他任何内容都不要改。</p>
+
+<p>然后等候DNS配置更新（1分钟左右），之后在浏览器器输入你买的域名地址，你的个人页面就可以访问了。</p>
+
+<h2 id="7下载github桌面软件">7、下载GitHub桌面软件</h2>
+
+<p>为了更方便管理你的仓库，你可以下载 <a href="https://desktop.github.com/">GitHub 桌面版软件</a>，安装完成后打开软件，点击左上角File，然后选择 Clone repository</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog12.png" alt="克隆" /></p>
+
+<p>点击URL，选择你要克隆的仓库和你要存放在电脑的路径地址。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog13.png" alt="克隆路径" /></p>
+
+<h2 id="8更换主题">8、更换主题</h2>
+
+<p>这时候，就该真正考虑一下你的博客风格了，如果你前端功底不好，就不建议频繁更换主题了，虽然要改也不是不行，只是很折腾。</p>
+
+<p>你可以到下边的网站找你喜欢的主题：</p>
+
+<ul>
+  <li><a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a></li>
+  <li><a href="https://jekyllthemes.io/">https://jekyllthemes.io/</a></li>
+</ul>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog14.png" alt="更换主题" /></p>
+
+<p>我就以这个主题 <a href="http://jekyllthemes.org/themes/Less-Or-More/">Less Or More</a> 举例</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog15.png" alt="模板范例" /></p>
+
+<p>点击 <strong>Downlod</strong>，把它下载下来，你也可以先点击 <strong>Demo</strong> 预览一下。</p>
+
+<h2 id="9应用主题">9、应用主题</h2>
+
+<p>打开存放你克隆仓库的文件夹，把里面的文件全部都删了（没错），除了隐藏文件夹 <strong>.git</strong> 不要删。</p>
+
+<p>显示隐藏文件，找到 <strong>.git</strong> 文件夹。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog16.png" alt="显示隐藏文件" /></p>
+
+<p>然后把你下载的主题里的东西全部拖到你的原博客仓库里。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog17.png" alt="更改内容" /></p>
+
+<h2 id="10配置博客">10、配置博客</h2>
+
+<p>简单介绍一下这个仓库里的内容，根据自身需要修改内容</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog18.png" alt="配置" /></p>
+
+<ul>
+  <li>index.html：这是你博客的主页面，里面的内容就是你的主页了</li>
+  <li>_config.yml：这是你博客的基本配置文件，里面有你博客的名字，以及存放博主的一些基本信息</li>
+  <li>_layouts：这文件夹里面存放你每个页面的设计，一般有default.html（默认页面）和posts.html（博文页面）</li>
+  <li>_includes：这个文件夹里的的内容将会通用到你博客每个页面，起到一种便利的作用</li>
+  <li>_posts：这里面装的就是你的博文啦，记住，要用markdown语法写，要不上传会失败的</li>
+</ul>
+
+<h2 id="11上传到github">11、上传到GitHub</h2>
+
+<p>现在你已经把博客基本配置完成了，把它上传到GitHub公布吧</p>
+
+<p>打开 GitHub 软件，你会发现changes那栏多了数字，这就是你本地文件发生改变数目的情况，在下边Summary 随便写串东西记录一下（更新日志等），然后点击 <strong>Commit to master</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog19.png" alt="上传" /></p>
+
+<p>点击 <strong>Fetch origin</strong> 提交</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/02_createblog/create_blog20.png" alt="提交" /></p>
+
+<h2 id="12end">12、end</h2>
+
+<p>稍等一会儿，打开你的网站，就会发现你的博客已经神奇的出现了。</p>
+
+:ET

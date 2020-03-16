@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="边玉杰,Lien,前端,边玉杰的技术博客,边玉杰的网站,web开发,html,css,javascript"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>typewriter</title>
+
+    <link
+      rel="stylesheet"
+      href="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/demo/typewriter/typewriter.css"
+    />
+
+    <style>
+      body {
+        color: #555;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+      }
+      .typewriter {
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 50px;
+        padding: 5px;
+        line-height: 50px;
+        border: 0.5px solid #ccc;
+        margin-top: -35px;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>typewriter.js</h1>
+
+    <div class="typewriter">
+      <span id="words"></span><span id="cursor">|</span>
+    </div>
+
+    <script src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/demo/typewriter/typewriter.js"></script>
+
+    <script>
+      var strings = new Array(
+        "她又取出了一根火柴，朝墙上一擦，于是火柴点燃了，它的火光照亮了周围的一切。",
+        "她在一座房子的墙角里坐下来，蜷着腿缩成一团。她觉得更冷了。她不敢回家。",
+        "她的脸颊红红的，嘴角露出幸福的微笑，她已死了——就在这旧年的除夕之夜被冻死了。"
+      );
+      var typingSpeed = 100; // 打出每个字的间隔时间
+      var deleteSpeed = 40; // 删除每个字的间隔时间
+      var isLoop = true; // 是否循环，true/false
+      var waitTime = 800; // 打完一个字段后的等待时间
+    </script>
+  </body>
+</html>

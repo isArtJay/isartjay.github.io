@@ -1,0 +1,20 @@
+permalink: /:year:month:day/:title
+url: https://www.lien.run/
+baseurl:
+
+name: Lien
+description: 边玉杰的技术博客
+google_verification: null
+
+include: [".htaccess"]
+exclude: ["README.md", "LICENSE"]
+
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{  post.url }}" title="{{ post.title }}"
+      ><img
+        src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
+        title="{{ post.title }}"
+      />{{ post.title }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
