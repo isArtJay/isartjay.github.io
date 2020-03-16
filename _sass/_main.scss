@@ -81,14 +81,31 @@ body {
 .default_title img {
   margin-right: 0;
 }
+
 .post_title {
+  .textimg {
+    margin-left: 2px;
+  }
+  position: relative;
   h1 {
     display: inline-block;
-    margin: 3px 0;
+    // margin: 3px 0;
+  }
+
+  .btn_no {
+    float: none;
+    margin: 0 0 0 2px;
   }
 
   a {
     color: #000000;
+  }
+
+  .iconac {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .btn {
@@ -96,27 +113,11 @@ body {
     margin-top: 1px;
     background: #cccccc;
     width: 13px;
-    height: auto;
+    height: 13px;
+    display: inline-block;
     float: right;
     border: 2px solid;
     border-color: #fff8ff #000000 #000000 #fff8ff;
-
-    i {
-      font-size: 11px;
-      position: relative;
-      left: 2px;
-      top: -2px;
-    }
-
-    .fa-window-minimize {
-      font-size: 10px;
-      left: 1px;
-    }
-
-    .fa-window-maximize {
-      font-size: 10px;
-      left: 1px;
-    }
   }
 
   .btn_max,
@@ -124,17 +125,12 @@ body {
     margin-left: 8px;
   }
 
-  .btn:active {
-    width: 12px;
-    height: 13px;
-  }
-
   .btnimg {
-    float: left;
     width: 12px;
     height: 12px;
   }
 }
+
 ul.topbar {
   list-style: none;
   padding: 0 10px;
