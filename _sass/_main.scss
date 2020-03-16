@@ -96,7 +96,7 @@ body {
     margin-top: 1px;
     background: #cccccc;
     width: 13px;
-    height: 13px;
+    height: auto;
     float: right;
     border: 2px solid;
     border-color: #fff8ff #000000 #000000 #fff8ff;
@@ -997,4 +997,15 @@ ul.topbar {
   -ms-user-select: none;
   -khtml-user-select: none;
   user-select: none;
+}
+
+.content .posttitle {
+  margin-top: 1px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 15px;
+  max-width: 65%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
