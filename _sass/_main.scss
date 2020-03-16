@@ -89,7 +89,6 @@ body {
   position: relative;
   h1 {
     display: inline-block;
-    // margin: 3px 0;
   }
 
   .btn_no {
@@ -928,6 +927,10 @@ ul.topbar {
   }
 }
 @media only screen and (max-width: 700px) {
+  .post_title .btn_small,
+  .post_title .btn_max {
+    display: none;
+  }
   #resource-con .resource-text {
     width: 65%;
   }
