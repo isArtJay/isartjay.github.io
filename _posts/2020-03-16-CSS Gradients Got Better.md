@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CSS3 conic-gradient 圆锥渐变圆锥渐变圆锥渐变圆锥渐变圆锥渐变"
+title: "CSS3 conic-gradient 圆锥渐变"
 tags: archives
 ---
 
