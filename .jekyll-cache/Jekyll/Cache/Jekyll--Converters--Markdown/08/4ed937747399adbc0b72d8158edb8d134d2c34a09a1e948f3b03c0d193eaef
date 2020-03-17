@@ -1,0 +1,133 @@
+I"�<h1 id="移动端-1px-边框的问题">移动端 1px 边框的问题</h1>
+
+<h1 id="1px问题产生的原因">1px问题产生的原因</h1>
+
+<p>从移动端的角度说个具体的场景，以 iphone6 为例。</p>
+
+<p>iphone6 的屏幕宽度为 375px，设计师做的视觉稿一般是 750px，也就是 2x，这个时候设计师在视觉稿上画了1px 的边框，于是你就写了 “border-width:1px”，<strong>so…1px边框问题产生了</strong>。</p>
+
+<p>对设计师来说它的 1px 是相对于 750px 的（物理像素），对你来说你的1px是相对于375px的（css像素）“<strong>实际上你应该是border-width:0.5px</strong>”。</p>
+
+<h1 id="具体方案">具体方案</h1>
+
+<p>知道了问题产生的原因，那么解决方案解决方案就好弄了。为了避免大家少走弯路，这里简单带一下网上提到的几种方案：</p>
+
+<ul>
+  <li>用小数写边框</li>
+  <li>伪元素 transform</li>
+  <li>box-shadow</li>
+  <li>border-image</li>
+</ul>
+
+<h2 id="1用小数写边框">1、用小数写边框</h2>
+
+<p>用媒体查询，加小数的写法</p>
+
+<pre><code class="language-html">&lt;span class="border-1px"&gt;1像素边框问题&lt;/span&gt;
+</code></pre>
+
+<pre><code class="language-css">.border-1px { border: 1px solid #999 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .border-1px { border: 0.5px solid #999 }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    .border-1px { border: 0.333333px solid #999 }
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/13_1px/3.png" alt="" /></p>
+
+<p>优点：方便</p>
+
+<p>缺点：安卓与低版本 IOS 不适用</p>
+
+<h2 id="2伪元素-transform">2、伪元素 transform</h2>
+
+<p>利用伪类标签，更具父级定位，大小更具媒体查询缩放实现效果。</p>
+
+<pre><code class="language-html">&lt;span class="border-1px"&gt;1像素边框问题&lt;/span&gt;
+</code></pre>
+
+<pre><code class="language-css">.border-1px {
+  position: relative;
+}
+
+.border-1px::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  border: 1px solid red;
+  color: red;
+  height: 200%;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  pointer-events: none; 
+  box-sizing: border-box;
+}
+
+@media screen and (min-device-pixel-ratio: 3),
+  (-webkit-min-device-pixel-ratio: 3) {
+  width: 300%;
+  height: 300%;
+  -webkit-transform: scale(0.33);
+  transform: scale(0.33);
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/13_1px/1.png" alt="" /></p>
+
+<p>优点：不止是圆角， 其他的边框也可以这样做出来</p>
+
+<p>缺点：代码量也很大，占据了伪元素,，容易引起冲突</p>
+
+<h2 id="3box-shadow">3、box-shadow</h2>
+
+<p>利用阴影来模拟边框</p>
+
+<pre><code class="language-html">&lt;span class="border-1px"&gt;1像素边框问题&lt;/span&gt;
+</code></pre>
+
+<pre><code class="language-css">.border-1px{
+  box-shadow: 0px 0px 1px 0px red inset;
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/13_1px/2.png" alt="" /></p>
+
+<h2 id="4border-image">4、Border-image</h2>
+
+<p>弄出 1px 像素边框的实质是弄出 0.5px 这样的边框，所以我们可以利用类似于这样的图片，使得 “border-image-slice” 为 2，那么实际上边框有一半是透明的，即可得到我们想要的“ 1px 边框”。</p>
+
+<pre><code class="language-html">&lt;div class="test"&gt;
+    1像素边框
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.test{
+    border: 1px solid transparent;
+    border-image: url('./border-1px.png') 2 repeat;
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/13_1px/4.png" alt="" /></p>
+
+<p>Border-image 兼容性：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/13_1px/5.png" alt="" /></p>
+
+<p>缺点：修改颜色麻烦，需要替换图片；圆角需要特殊处理，并且边缘会模糊</p>
+
+<h1 id="参考文章">参考文章</h1>
+
+<p><a href="https://www.cnblogs.com/lunarorbitx/p/5287309.html">移动端1px细线解决方案总结</a></p>
+
+<p><a href="https://www.w3cplus.com/css/fix-1px-for-retina.html">再谈Retina下1px的解决方案</a></p>
+
+<p><a href="https://juejin.im/entry/584e427361ff4b006cd22c7c">7 种方法解决移动端 Retina 屏幕 1px 边框问题</a></p>
+:ET

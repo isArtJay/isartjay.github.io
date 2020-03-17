@@ -1,0 +1,24 @@
+I"V<h1 id="css3-conic-gradient-圆锥渐变">CSS3 conic-gradient 圆锥渐变</h1>
+
+<p>感谢 <a href="https://github.com/LeaVerou">LeaVerou</a> 大神，让我们可以提前使用上这么美妙的属性。</p>
+
+<p>conic-gradient 是个什么？说到 conic-gradient ，就不得不提的它的另外两个兄弟：</p>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient">linear-gradient 线性渐变</a></p>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/radial-gradient">radial-gradient 径向渐变</a></p>
+
+<p>这两种渐变应该有很多人使用过的，CSS3 的线性渐变及径向渐变给 CSS 世界带来了很大的变化。而 conic-gradient ，表示圆锥渐变，是另外一种渐变方式，给 CSS 世界带来了更多可能，CSS 渐变也会变得越来越好。</p>
+
+<p>先看最简单的例子：</p>
+
+<pre><code>
+</code></pre>
+
+<p>参考文献：</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient">conic-gradient MDN</a></p>
+
+<p><a href="http://leaverou.github.io/conic-gradient/">CSS conic-gradient()</a></p>
+
+:ET

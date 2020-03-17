@@ -1,0 +1,82 @@
+I"�<h1 id="为网站添加评论模块">为网站添加评论模块</h1>
+
+<p>由于 Disqus 对于国内网路的支持十分糟糕，所以我选择了 <a href="https://gitalk.github.io/">Gitalk</a></p>
+
+<p>首先来看看 Gitalk 的界面：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/04_gitalk/gitalk_01.png" alt="Gitalk的界面" /></p>
+
+<h1 id="gitalk原理">Gitalk原理</h1>
+
+<p>Gitalk 是一个利用 GitHub API，基于 Github issue 和 Preact 开发的评论插件。在 Gitalk 的评论框进行评论时，其实就是在 GitHub 仓库对应的 issue 上提问题。</p>
+
+<h1 id="必要的准备">必要的准备</h1>
+
+<p>使用 Gitalk 前，需要去 GitHub <a href="https://github.com/settings/applications/new">注册一个 Github OAuth application</a>：</p>
+
+<p>填写参数：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/04_gitalk/gitalk_04.png" alt="Application" /></p>
+
+<p>点击 Register application 注册，成功后，记录下你的 Client ID 和 Client Secret：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/04_gitalk/gitalk_05.png" alt="clientID clientSecret" /></p>
+
+<h1 id="安装gitalk">安装Gitalk</h1>
+
+<p>直接引入下面两个文件：</p>
+
+<pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h1 id="使用">使用</h1>
+
+<p>1、在适合的位置添加一个容器：</p>
+
+<pre><code class="language-html">&lt;div id="gitalk-container"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>2、用下面的 Javascript 代码来生成 Gitalk 插件：</p>
+
+<pre><code class="language-javascript">&lt;script&gt;
+    var gitalk = new Gitalk({
+      clientID: '',	
+      clientSecret: '',	
+      repo: '',	
+      owner: '',	
+      admin: [''],	
+      id: location.pathname,	
+      distractionFreeMode: false})
+
+    gitalk.render('gitalk-container')
+&lt;/script&gt;
+</code></pre>
+
+<p>3、配置参数（必选）</p>
+
+<ul>
+  <li>Client ID（你的 GitHub Client ID）</li>
+  <li>ClientSecret（你的 GitHub ClientSecret）</li>
+  <li>repo（存储评论的 GitHub 仓库名）</li>
+  <li>owner（你的 GitHub 用户名）</li>
+  <li>admin（你的 GitHub 用户名）</li>
+</ul>
+
+<p>4、其他配置参数（可选）</p>
+
+<ul>
+  <li>id（默认就行，不用修改）</li>
+  <li>distractionFreeMode（评论框的全屏遮罩效果，不用修改，Default：false）</li>
+  <li>perPage（每次加载评论的条数，最多100，Default：10）</li>
+  <li>flipMoveOptions（评论列表的动画，<a href="https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/enter_leave_animations.md">参考</a>）</li>
+  <li>pagerDirection（评论排序方式，last为按评论创建时间倒叙，first为按创建时间正序）</li>
+</ul>
+
+<p>当然，还有其他很多参数，有兴趣的话可以<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md#%E8%AE%BE%E7%BD%AE">点这里</a></p>
+
+<h1 id="end">End</h1>
+
+<p>配置好参数，快去你的网站添加评论吧。</p>
+
+:ET

@@ -4,6 +4,8 @@ title: "为网站添加评论模块"
 tags: archives
 ---
 
+# 为网站添加评论模块
+
 由于 Disqus 对于国内网路的支持十分糟糕，所以我选择了 [Gitalk](<https://gitalk.github.io/>)
 
 首先来看看 Gitalk 的界面：

@@ -1,0 +1,26 @@
+I"�<p>你有没有遇到过这样的需求：点击一个链接（内链）跳转到当前页面的某个部分。</p>
+
+<p>对于这样的需求，很容易想到使用锚点实现，但有一个问题：滚动一步到位，太生硬了。相比我还是比较喜欢平滑滚动。HTML5 中提供了 CSS 属性 scroll-behavior ，并且修改了一系列滚动函数的可接受参数用于支持平滑滚动特性。</p>
+
+<h1 id="scroll-behavior">scroll-behavior</h1>
+
+<p>先来看看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-behavior">MDN 的介绍</a></p>
+
+<p>这个 CSS 属性就只接受两个自定义值：auto 和 smooth。默认值为 auto，表示立刻滚到底；smooth 即表示平滑滚动。这个属性会影响滚动函数  scrollTo、scrollIntoView 等的默认滚动行为，也会影响 <code>scrollTop</code>、<code>scrollLeft</code> 等 DOM 属性改变时的滚动行为。如果 <code>scroll-behavior</code> 被设置在根元素（&lt;html&gt;）上，表示应用在视口（viewport）上。这时对锚点、内链触发的视口滚动同样有效。</p>
+
+<p>所以只需要给 html 元素设置样式 <code>scroll-behavior: smooth</code> 点击内链就会触发页面的平滑滚动，很简单吧。</p>
+
+<p>当用户手动导航或者 CSSOM scrolling API 触发滚动操作时，CSS 属性 scroll-behavior 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。</p>
+
+<p>其实 <strong>scroll-behavior</strong> 的使用没有那么多花头，你就记住这么一句话 —— <strong>凡是需要滚动的地方都加一句scroll-behavior:smooth就好了！</strong>你别管他用不用得到，也不用管浏览器兼容性如何，你都加上。</p>
+
+<p>真的很丝滑~</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/12_smooth/1.png" alt="" /></p>
+
+<h1 id="兼容性">兼容性</h1>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/12_smooth/2.png" alt="" /></p>
+
+<p><a href="https://codepen.io/yj_bian/pen/QWbaPOL">Demo</a></p>
+:ET
