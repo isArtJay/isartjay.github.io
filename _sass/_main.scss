@@ -5,9 +5,6 @@ body {
   min-width: 300px;
 }
 
-// .gt-comment-text {
-// }
-
 .bigcon {
   width: 90%;
   position: absolute;
@@ -20,7 +17,6 @@ body {
     font-weight: bold;
     word-spacing: 2px;
     margin-top: 2px;
-    // letter-spacing: 1px;
     text-indent: 2.5em;
     font-size: 12px;
     line-height: 12px;
@@ -41,13 +37,13 @@ body {
   float: left;
   width: 28%;
   .logo {
-    // padding-left: 5px;
     padding: 2px 0 2px 5px;
     width: 20px;
     display: block;
     float: left;
   }
 }
+
 .content {
   width: 68%;
   float: right;
@@ -57,14 +53,16 @@ body {
 .post_title {
   padding: 2px 4px 3px 4px;
   position: relative;
-
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
   h1 {
     color: #bfb8bf;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 12px;
     font-weight: bold;
   }
-
   img {
     float: left;
     width: 14px;
@@ -75,58 +73,45 @@ body {
     margin-top: 1.5px;
   }
 }
-.default_title a {
-  text-decoration: none;
-}
-.default_title img {
-  margin-right: 0;
+
+.default_title {
+  img {
+    margin-right: 0;
+  }
 }
 
 .post_title {
   .textimg {
     margin-left: 2px;
   }
-  position: relative;
-  h1 {
-    display: inline-block;
-  }
-
   .btn_no {
     float: none;
     margin: 0 0 0 2px;
   }
-
-  a {
-    color: #000000;
-  }
-
   .iconac {
     position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
   }
-
   .btn {
     cursor: pointer;
     margin-top: 1px;
     background: #cccccc;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     display: inline-block;
     float: right;
     border: 2px solid;
     border-color: #fff8ff #000000 #000000 #fff8ff;
   }
-
+  .btnimg {
+    width: 11px;
+    height: 11px;
+  }
   .btn_max,
   .btn_no {
     margin-left: 8px;
-  }
-
-  .btnimg {
-    width: 12px;
-    height: 12px;
   }
 }
 
@@ -134,7 +119,6 @@ ul.topbar {
   list-style: none;
   padding: 0 10px;
   margin: 3px 0 3px 0;
-
   li {
     display: inline-block;
     margin: 0 5px 0 0;
@@ -144,6 +128,7 @@ ul.topbar {
     color: #000000;
   }
 }
+
 .post_list,
 .tag_list,
 .post_content {
@@ -160,7 +145,6 @@ ul.topbar {
   max-height: 490px;
   overflow-y: scroll;
   display: inline-block;
-
   ul {
     list-style: none;
 
@@ -172,14 +156,12 @@ ul.topbar {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-
       img {
         position: absolute;
         left: 0;
         top: 0;
         width: 19px;
       }
-
       a {
         margin-left: 25px;
         color: #0000ff;
@@ -187,6 +169,7 @@ ul.topbar {
     }
   }
 }
+
 .tag_list {
   width: 28%;
   margin: 0 auto;
@@ -194,18 +177,15 @@ ul.topbar {
   max-height: 150px;
   overflow-y: scroll;
   display: inline-block;
-
   img {
     height: 16px;
     width: 16px;
     margin: -2px 5px;
   }
-
   a {
     text-decoration: none;
     color: #000000;
   }
-
   ul {
     li {
       max-width: 27ch;
@@ -215,26 +195,28 @@ ul.topbar {
     }
   }
 }
+
 #tag-list {
   background: transparent
     url(https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/pixel-alt.png)
     repeat-y 15px 0;
+  li {
+    padding: 0 0 0 2px;
+    ul li {
+      background: transparent
+        url(https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/pixel-alt.png)
+        repeat-x 0 8px;
+      margin: 4px 0 4px 13px;
+      padding: 0 0 0 20px;
+    }
+    a {
+      background: #fff8ff;
+      display: block;
+      padding: 2px 0;
+    }
+  }
 }
-#tag-list li {
-  padding: 0 0 0 2px;
-}
-#tag-list li a {
-  background: #fff8ff;
-  display: block;
-  padding: 2px 0;
-}
-#tag-list li ul li {
-  background: transparent
-    url(https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/pixel-alt.png)
-    repeat-x 0 8px;
-  margin: 4px 0 4px 13px;
-  padding: 0 0 0 20px;
-}
+
 .post_total {
   padding-top: 1px;
   cursor: default;
@@ -255,6 +237,7 @@ ul.topbar {
     margin-right: 2px;
   }
 }
+
 .post_content {
   position: relative;
   width: 98.5%;
@@ -331,7 +314,6 @@ ul.topbar {
   em {
     font-style: italic;
   }
-
   blockquote {
     border-left: 3px solid #000000;
     width: 85%;
@@ -342,41 +324,33 @@ ul.topbar {
       text-align: justify;
     }
   }
-
   strong {
     font-weight: 700;
   }
-
   hr {
     border-top: 1px solid #ccc;
     border-left: 0;
   }
-
   ul {
     list-style: square;
     width: 85%;
     margin: 0 0 15px 73px;
-
     li {
       padding: 5px;
       line-height: 20px;
       font-size: 14px;
-
       ul {
         margin: 10px 0 0 15px;
-
         li {
           padding: 5px;
         }
       }
     }
   }
-
   ol {
     list-style: decimal-leading-zero;
     margin: 0 0 15px 45px;
     width: 85%;
-
     li {
       padding: 5px;
 
@@ -389,14 +363,12 @@ ul.topbar {
       }
     }
   }
-
   table,
   th,
   td {
     border: 1px solid #222222;
     padding: 2px;
   }
-
   pre {
     width: 85%;
     margin: 0 auto;
@@ -410,41 +382,47 @@ ul.topbar {
     }
   }
 }
+
 .hljs {
   background: #fff8ff;
 }
+
 .footer {
   font-size: 12px;
   margin: 30px 0 10px 0;
-
   p {
     text-align: center;
-
     a {
       color: #24244a;
     }
   }
 }
+
 .donate {
   text-align: center;
   margin: 10px 0;
   cursor: default;
 }
+
 .one {
   margin-top: 20px;
 }
+
 .two {
   margin-bottom: 20px;
 }
+
 .post_content .four-four {
   font-weight: 600;
   margin-top: 5px;
   margin-left: 50px;
   font-size: 18px;
 }
+
 .post_content .four-ul {
   margin-left: 100px;
 }
+
 @media only screen and (max-width: 1208px) {
   .wrapper,
   .content {
@@ -452,7 +430,6 @@ ul.topbar {
     float: none;
     margin: 20px auto 20px;
   }
-
   .post_list {
     min-height: auto;
   }
@@ -480,6 +457,7 @@ ul.topbar {
     }
   }
 }
+
 @media only screen and (max-width: 700px) {
   .content {
     width: 90%;
@@ -491,6 +469,7 @@ ul.topbar {
     width: 55%;
   }
 }
+
 @media only screen and (max-width: 810px) {
   .post_content ul {
     margin: 0 0 15px 30px;
@@ -527,6 +506,7 @@ ul.topbar {
     }
   }
 }
+
 @media only screen and (max-width: 610px) {
   .tag_list {
     width: 98.7%;
@@ -541,16 +521,15 @@ ul.topbar {
     }
   }
 }
+
 @media only screen and (max-width: 520px) {
   .bigcon #typew {
-    // display: none;
   }
   .post_total {
     .left {
       width: 97%;
     }
   }
-
   .post_content .four-four {
     font-weight: 600;
     margin-top: 5px;
@@ -569,7 +548,6 @@ ul.topbar {
     }
   }
 }
-
 ::-webkit-scrollbar {
   width: 16px;
 }
@@ -577,14 +555,12 @@ ul.topbar {
   background-image: url("https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/track.png");
   background-repeat: repeat-x repeat-y;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #cccccc;
   border-width: 2px;
   border-style: groove ridge ridge groove;
   border-color: #fff8ff #000000 #000000 #fff8ff;
 }
-
 ::-webkit-scrollbar-button {
   background-color: #cccccc;
   border-width: 2px;
@@ -592,23 +568,18 @@ ul.topbar {
   border-color: #fff8ff #000000 #000000 #fff8ff;
   background-position: center center;
   background-repeat: no-repeat;
-
   &:vertical:decrement {
     background-image: url("https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/up.png");
   }
-
   &:vertical:increment {
     background-image: url("https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/down.png");
   }
-
   &:horizontal:decrement {
     background-image: url("https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/left.png");
   }
-
   &:horizontal:increment {
     background-image: url("https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/right.png");
   }
-
   &:active {
     background-position: 1px 2px;
   }
@@ -900,17 +871,16 @@ ul.topbar {
   #resource-con .resource-text p {
     margin: 0 0 10px 0;
   }
-
   .post_content .busuanzi-count .clip {
     display: none;
   }
-
   .busuanzi-count {
     .line {
       display: none !important;
     }
   }
 }
+
 @media only screen and (max-width: 700px) {
   .post_title .btn_small,
   .post_title .btn_max {
@@ -926,6 +896,7 @@ ul.topbar {
     margin-top: 5px;
   }
 }
+
 @media only screen and (max-width: 360px) {
   #resource-con .resource-text {
     width: 65%;
@@ -954,7 +925,6 @@ ul.topbar {
 // 网站计数模块
 .post_content .busuanzi-count {
   display: block;
-
   cursor: default;
   color: #ccc;
   text-align: center;
@@ -987,7 +957,7 @@ ul.topbar {
   margin-top: 1px;
   margin-bottom: 0;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 15px;
   max-width: 80%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -999,10 +969,8 @@ ul.topbar {
   .post_title {
     h1 {
       font-size: 12px;
+      margin-top: 2px;
     }
-  }
-  .post_title .posttitle {
-    font-size: 12px;
   }
   .post_content {
     width: 97%;
