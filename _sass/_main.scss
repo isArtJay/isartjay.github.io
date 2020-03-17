@@ -561,22 +561,7 @@ ul.topbar {
     margin-left: 50px;
   }
 }
-@media only screen and (max-width: 410px) {
-  .default_title,
-  .post_title {
-    h1 {
-      font-size: 12px;
-    }
-  }
-  .post_content {
-    width: 97%;
-  }
-  .post_total {
-    .left {
-      width: 97%;
-    }
-  }
-}
+
 @media only screen and (max-width: 375px) {
   .post_total {
     .left {
@@ -999,12 +984,32 @@ ul.topbar {
 }
 
 .content .posttitle {
-  margin-top: 3px;
+  margin-top: 1px;
   margin-bottom: 0;
   font-size: 13px;
-  line-height: 15px;
+  line-height: 18px;
   max-width: 80%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media only screen and (max-width: 410px) {
+  .default_title,
+  .post_title {
+    h1 {
+      font-size: 12px;
+    }
+  }
+  .post_title .posttitle {
+    font-size: 12px;
+  }
+  .post_content {
+    width: 97%;
+  }
+  .post_total {
+    .left {
+      width: 97%;
+    }
+  }
 }
