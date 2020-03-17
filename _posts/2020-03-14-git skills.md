@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "踩坑！用 Git 同时管理两个远程仓库"
+title: "踩坑！用 Git 同时管理两个远程仓库两个远程仓库"
 tags: archives
 ---
 
