@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>date-calculator 日期计算器</title>
+    <link
+      rel="shortcut icon"
+      href="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/demo/date-calculator/style.css"
+    />
+  </head>
+  <body>
+    <div id="con" class="notselect">
+      <h1 class="title">日期计算</h1>
+      <p class="title-sub">
+        计算两个日期之间差多少天
+      </p>
+      <div class="calculator">
+        <div class="calculator-old">
+          <input
+            onkeyup="this.value=this.value.replace(/\D/g,'')"
+            onafterpaste="this.value=this.value.replace(/\D/g,'')"
+            type="text"
+            id="old_y"
+          />
+          <span>年</span>
+          <input
+            onkeyup="this.value=this.value.replace(/\D/g,'')"
+            onafterpaste="this.value=this.value.replace(/\D/g,'')"
+            type="text"
+            id="old_m"
+          />
+          <span>月</span>
+          <input
+            onkeyup="this.value=this.value.replace(/\D/g,'')"
+            onafterpaste="this.value=this.value.replace(/\D/g,'')"
+            type="text"
+            id="old_d"
+          />
+          <span>日</span>
+        </div>
+        <p class="clip-line">距离</p>
+
+        <div class="calculator-new">
+          <input
+            onkeyup="this.value=this.value.replace(/\D/g,'')"
+            onafterpaste="this.value=this.value.replace(/\D/g,'')"
+            type="text"
+            id="new_y"
+          />
+          <span>年</span>
+          <input
+            onkeyup="this.value=this.value.replace(/\D/g,'')"
+            onafterpaste="this.value=this.value.replace(/\D/g,'')"
+            type="text"
+            id="new_m"
+          />
+          <span>月</span>
+          <input
+            onkeyup="this.value=this.value.replace(/\D/g,'')"
+            onafterpaste="this.value=this.value.replace(/\D/g,'')"
+            type="text"
+            id="new_d"
+          />
+          <span>日</span>
+        </div>
+
+        <div class="calculato-button">
+          <a href="#" onclick="calculator()">计算</a>
+          <p><span id="number"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/demo/date-calculator/index.js"></script>
+  </body>
+</html>
