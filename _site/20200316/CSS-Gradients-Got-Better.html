@@ -266,27 +266,68 @@
 
 <h1 id="先看一些例子">先看一些例子</h1>
 
-<pre><code class="language-css">background: conic-gradient(#f06, gold);
+<pre><code class="language-html">&lt;div class="demo"&gt;&lt;/div&gt;
 </code></pre>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/2.png" alt="" /></p>
-
-<pre><code class="language-css">background: conic-gradient(#eee .1turn, black, #eee 326deg);
+<pre><code class="language-css">.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(#f06, gold);
+}
 </code></pre>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/3.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/01.png" alt="" /></p>
 
-<pre><code class="language-css">background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
-border-radius: 50%
+<pre><code class="language-html">&lt;div class="demo"&gt;&lt;/div&gt;
 </code></pre>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/4.png" alt="" /></p>
-
-<pre><code class="language-css">background: #0ac
-repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
+<pre><code class="language-css">.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(#eee .1turn, black, #eee 326deg);
+}
 </code></pre>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/6.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/02.png" alt="" /></p>
+
+<pre><code class="language-html">&lt;div class="demo"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  border-radius: 50%
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/03.png" alt="" /></p>
+
+<pre><code class="language-html">&lt;div class="demo"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.demo {
+  width: 200px;
+  height: 200px;
+  background: #0ac
+  repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/04.png" alt="" /></p>
+
+<pre><code class="language-html">&lt;div class="demo"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(black 25%, white 0 50%, black 0 75%, white 0);
+  background-size: 4em 4em;
+}
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/05.png" alt="" /></p>
 
 <h1 id="与线性渐变及圆锥渐变的异同">与线性渐变及圆锥渐变的异同</h1>
 
@@ -299,13 +340,13 @@ repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
 
 <p>而从方向上来说，圆锥渐变的方向是这样的：</p>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/5.gif" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/07.png" alt="" /></p>
 
 <p>从上边的例子中可以看到，圆锥渐变的渐变方向和起始点。起始点是图形中心，然后以顺时针方向绕中心实现渐变效果。</p>
 
 <h1 id="兼容性">兼容性</h1>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/1.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/06.png" alt="" /></p>
 
 <h1 id="conic-gradient-polyfill-垫片库">conic-gradient polyfill 垫片库</h1>
 

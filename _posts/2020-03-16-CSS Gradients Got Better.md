@@ -17,31 +17,78 @@ tags: archives
 
 # 先看一些例子
 
-```css
-background: conic-gradient(#f06, gold);
+```html
+<div class="demo"></div>
 ```
 
-![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/2.png)
-
 ```css
-background: conic-gradient(#eee .1turn, black, #eee 326deg);
+.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(#f06, gold);
+}
 ```
 
-![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/3.png)
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/01.png)
 
-```css
-background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
-border-radius: 50%
+```html
+<div class="demo"></div>
 ```
 
-![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/4.png)
-
 ```css
-background: #0ac
-repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
+.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(#eee .1turn, black, #eee 326deg);
+}
 ```
 
-![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/6.png)
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/02.png)
+
+```html
+<div class="demo"></div>
+```
+
+```css
+.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  border-radius: 50%
+}
+```
+
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/03.png)
+
+```html
+<div class="demo"></div>
+```
+
+```css
+.demo {
+  width: 200px;
+  height: 200px;
+  background: #0ac
+  repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
+}
+```
+
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/04.png)
+
+```html
+<div class="demo"></div>
+```
+
+```css
+.demo {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(black 25%, white 0 50%, black 0 75%, white 0);
+  background-size: 4em 4em;
+}
+```
+
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/05.png)
 
 # 与线性渐变及圆锥渐变的异同
 
@@ -52,13 +99,13 @@ repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
 
 而从方向上来说，圆锥渐变的方向是这样的：
 
-![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/5.gif)
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/07.png)
 
 从上边的例子中可以看到，圆锥渐变的渐变方向和起始点。起始点是图形中心，然后以顺时针方向绕中心实现渐变效果。
 
 # 兼容性
 
-![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/1.png)
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/15_conic-gradient/06.png)
 
 # conic-gradient polyfill 垫片库
 
@@ -88,18 +135,6 @@ LeaVerou 提供了一个垫片库，按照本文上述的语法，添加这个�
 ```
 
 > 因为垫片库的作用是将我们的 CSS 语法转化成为 BASE64 代码替换 background-image: url() 中的内容，所以，上线后是不需要再添加这两个库的。
-
-
-
-
-
-
-
-
-
-
-
-
 
 参考文献：
 
