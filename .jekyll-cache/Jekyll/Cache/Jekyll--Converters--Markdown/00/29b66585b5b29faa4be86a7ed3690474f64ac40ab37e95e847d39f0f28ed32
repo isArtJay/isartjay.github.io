@@ -1,0 +1,9 @@
+I"<h1 id="picture-in-picture-画中画">Picture-in-Picture 画中画</h1>
+
+<p>这个 API 允许网页创建一个浮动的视频播放小窗口，它会一直显示在其他窗口的最前面，这样用户就可以继续观看视频，同时他们也可以继续浏览其他网页或继续操作其他应用程序。</p>
+
+<p>正统浏览器们终于要内置这个功能了，而且还有配套的 API 给开发者使用。</p>
+
+<p><a href="https://wicg.github.io/admin/charter.html">WICG</a>，全名为 Web Incubator Community Group（Web 孵化器社区小组），主要成员为 Chrome 的工程师们，他们标准化了这个能让视频弹窗播放的特性，起名为 <a href="https://w3c.github.io/picture-in-picture/">Picture-in-Picture</a>（画中画），缩写为 PiP。</p>
+
+:ET

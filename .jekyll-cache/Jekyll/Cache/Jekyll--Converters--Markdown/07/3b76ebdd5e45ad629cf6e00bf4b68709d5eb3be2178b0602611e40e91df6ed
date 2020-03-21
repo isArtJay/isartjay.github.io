@@ -1,0 +1,21 @@
+I"�	<h1 id="picture-in-picture-画中画">Picture-in-Picture 画中画</h1>
+
+<p>这个 API 允许网页创建一个浮动的视频播放小窗口，它会一直显示在其他窗口的最前面，这样用户就可以继续观看视频，同时他们也可以继续浏览其他网页或继续操作其他应用程序。</p>
+
+<p>现在正统浏览器已经内置这个功能了，而且还有配套的 API 给开发者使用。</p>
+
+<p><a href="https://wicg.github.io/admin/charter.html">WICG</a>，全名为 Web Incubator Community Group（Web 孵化器社区小组），主要成员为 Chrome 的工程师们，他们标准化了这个能让视频弹窗播放的特性，起名为 <a href="https://w3c.github.io/picture-in-picture/">Picture-in-Picture</a>（画中画），缩写为 PiP。</p>
+
+<p>下面将主要讲两方面：Chrome 当前实现的 PiP 交互是怎么样的，以及有哪些 API 让我们开发者使用。</p>
+
+<h1 id="chrome-中的-pip-交互">Chrome 中的 PiP 交互</h1>
+
+<p>我简单的弄了一个 <a href="https://www.lien.run/Project/pip">在线Demo</a> 页面。</p>
+
+<p>在演示 Demo 中可以看到，Chrome 在原生的 video 控件中提供了开启画中画模式的菜单项，一旦开启画中画模式，原本页面中内联（inline）展现的那个 video 还占据着原来的位置，各种控件也都在，但最重要的视频画面已经被无缝的转移到了新的弹出窗口中了，只剩下一张 poster 图片和一层灰色的遮罩。</p>
+
+<p>我们把弹出的那个视频窗口叫做 PiP 窗口，PiP 窗口只有视频画面，没有标题栏和地址栏（chrome-less），这一点和用 <code>window.open()</code>打开的弹窗不一样。同时，PiP 窗口也没有完整的视频控件，只有开始/暂停/关闭/返回到标签页四个按钮，时间、进度条、音量这些控件都没有。PiP 窗口还支持拖拽改变大小（不能大于一个象限），以及支持拖拽到任意位置。还有最重要的一点是，PiP 窗口在所有窗口中是置顶的（always on top）。</p>
+
+<p>但是，在同一时刻只能允许有一个 PiP 窗口。同一个页面里如果为多个视频开启画中画模式，前面开启的那个会自动退出画中画模式，同一个浏览器窗口下的多个 Tab 里的视频亦如此，同一个浏览器打开的多个浏览器窗口亦如此（在本文撰稿时，Chrome 还没有实现最后一种情况，即多个浏览器窗口可以同时开启多个 PiP 窗口，已确认是 bug 不是 feature）。</p>
+
+:ET
