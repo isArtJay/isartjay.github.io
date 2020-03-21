@@ -8,7 +8,7 @@ tags: archives
 
 感谢 [LeaVerou](<https://github.com/leaverou/conic-gradient>) 大神，让我们可以提前使用上这么美妙的属性。
 
-[conic-gradient 是个什么](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient)？说到 conic-gradient ，就不得不提的它的另外两个兄弟：
+[conic-gradient 是什么](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient)？说到 conic-gradient ，就不得不提的它的另外两个兄弟：
 
 - linear-gradient 线性渐变
 - radial-gradient 径向渐变

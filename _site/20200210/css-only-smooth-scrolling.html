@@ -90,6 +90,15 @@
           <ul>
             
             <li>
+              <a href="/20200321/css-vertical-center" title="浅谈 CSS 水平垂直居中"
+                ><img
+                  src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
+                  title="浅谈 CSS 水平垂直居中"
+                />浅谈 CSS 水平垂直居中</a
+              >
+            </li>
+            
+            <li>
               <a href="/20200320/text-overflow-ellipsis" title="实现“文本溢出截断省略”的几种方法"
                 ><img
                   src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
@@ -210,7 +219,7 @@
           
         </div>
         <div class="post_total notselect">
-           13 article(s) 
+           14 article(s) 
         </div>
       </div>
       
@@ -267,12 +276,131 @@
 
 <p>如果  scroll-behavior 被设置在根元素（&lt;html&gt;）上，表示应用在视口（viewport）上。这时对锚点、内链触发的视口滚动同样有效。</p>
 
-<p>所以只需要给 html 元素设置样式 scroll-behavior: smooth ，点击内链就会触发页面的平滑滚动，很简单吧。</p>
+<p>所以只需要给 html 元素设置样式 scroll-behavior: smooth ，点击内链就会触发页面的平滑滚动。</p>
 
-<pre><code class="language-html">html {scroll-behavior: smooth;}
+<p><strong>Demo</strong></p>
+
+<pre><code class="language-html">&lt;h1&gt;目录&lt;/h1&gt;
+&lt;ul id="top"&gt;
+  &lt;li&gt;&lt;a href="#a"&gt;第一段&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#b"&gt;第二段&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#c"&gt;第三段&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#d"&gt;第四段&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="a"&gt;第一段：&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
+&lt;h2 id="b"&gt;第二段&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
+&lt;h2 id="c"&gt;第三段&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
+&lt;h2 id="d"&gt;第四段&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+  &lt;li&gt;这是一句话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
 </code></pre>
 
-<p><a href="https://codepen.io/yj_bian/pen/QWbaPOL">Demo</a></p>
+<pre><code class="language-css">html {scroll-behavior: smooth;}
+</code></pre>
+
+<p><strong>效果示例</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/12_smooth/1.gif" alt="" /></p>
+
+<p><a href="https://codepen.io/yj_bian/pen/QWbaPOL">在线Demo</a></p>
 
 <h1 id="兼容性">兼容性</h1>
 

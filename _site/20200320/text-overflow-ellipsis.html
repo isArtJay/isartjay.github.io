@@ -90,6 +90,15 @@
           <ul>
             
             <li>
+              <a href="/20200321/css-vertical-center" title="浅谈 CSS 水平垂直居中"
+                ><img
+                  src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
+                  title="浅谈 CSS 水平垂直居中"
+                />浅谈 CSS 水平垂直居中</a
+              >
+            </li>
+            
+            <li>
               <a href="/20200320/text-overflow-ellipsis" title="实现“文本溢出截断省略”的几种方法"
                 ><img
                   src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
@@ -210,7 +219,7 @@
           
         </div>
         <div class="post_total notselect">
-           13 article(s) 
+           14 article(s) 
         </div>
       </div>
       
@@ -269,7 +278,6 @@
 <p><strong>核心 CSS 语句</strong></p>
 
 <ul>
-  <li>width: 400px；（限定宽度）</li>
   <li>overflow: hidden；（文字长度超出限定宽度，则隐藏超出的内容）</li>
   <li>white-space: nowrap；（设置文字在一行显示，不能换行）</li>
   <li>text-overflow: ellipsis；（规定当文本溢出时，显示省略符号来代表被修剪的文本）</li>
@@ -299,12 +307,11 @@
 <p><strong>Demo</strong></p>
 
 <pre><code class="language-html">&lt;div class="demo"&gt;
-      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
+      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
 &lt;/div&gt;
 </code></pre>
 
 <pre><code class="language-css">.demo {
-  width: 400px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -313,14 +320,13 @@
 
 <p><strong>效果示例</strong></p>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/2.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/2.gif" alt="" /></p>
 
 <h1 id="多行文本溢出省略-webkit-line-clamp">多行文本溢出省略（-webkit-line-clamp）</h1>
 
 <p><strong>核心 CSS 语句</strong></p>
 
 <ul>
-  <li>width: 400px；（限定宽度）</li>
   <li>overflow: hidden；（文本溢出限定的宽度就隐藏内容）</li>
   <li>-webkit-line-clamp: 2；（用来限制在一个块元素显示的文本的行数, 2 表示最多显示 2 行。 为了实现该效果，它需要组合其他的WebKit属性）</li>
   <li>display: -webkit-box；（和 -webkit-line-clamp: 2；结合使用，将对象作为弹性伸缩盒子模型显示 ）</li>
@@ -353,12 +359,11 @@
 <p><strong>Demo</strong></p>
 
 <pre><code class="language-html">&lt;div class="demo"&gt;
-      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
+      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
 &lt;/div&gt;
 </code></pre>
 
 <pre><code class="language-css">.demo {
-  width: 400px;
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 2;
@@ -368,7 +373,7 @@
 
 <p><strong>效果示例</strong></p>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/3.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/3.gif" alt="" /></p>
 
 <h1 id="多行文本溢出省略伪元素--定位">多行文本溢出省略（伪元素 + 定位）</h1>
 

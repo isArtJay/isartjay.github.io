@@ -1,0 +1,71 @@
+I"G<h1 id="js实现滚动监听以及滑动到顶部">js实现滚动监听以及滑动到顶部</h1>
+
+<p>用原生 js 来实现滚动监听以及滑动到顶部，当页面从顶部向下滑动超过 300px 时，返回顶部的图片出现，点击图片后，页面平滑的移动到页面顶部。</p>
+
+<h1 id="html代码">HTML代码：</h1>
+
+<pre><code class="language-html">&lt;div class="uptop" id="uptop"&gt;
+	&lt;img src="./images/backtop.png" id="to-top"&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h1 id="css代码">CSS代码：</h1>
+
+<pre><code class="language-css">.uptop{
+    position:fixed;
+    bottom:-50px;
+    right:30px;
+    width:50px;
+    z-index:9999;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    -ms-transition:all .5s;
+    -o-transition:all .5s;
+    transition:all .5s;
+}
+
+.uptop img{
+    width:80%;
+    cursor:pointer;
+}
+</code></pre>
+
+<h1 id="javascript代码">JavaScript代码：</h1>
+
+<pre><code class="language-javascript">window.onload = function () {
+    window.onscroll = function(){ 
+        var t = document.documentElement.scrollTop || document.body.scrollTop;  
+        var uptop = document.getElementById( "uptop" ); 
+        if( t &gt;= 300 ) { 
+            uptop.style.bottom=30+'px';
+        } else { 
+            uptop.style.bottom=-50+'px';
+        } 
+    } 
+
+    var top=document.getElementById("to-top");
+    var timer=null;
+    top.onclick = function(){ 
+        timer=setInterval(function(){ 
+            var ct = document.documentElement.scrollTop || document.body.scrollTop; 
+            ct-=30;
+            if(ct&gt;0){
+                    window.scrollTo(0,ct);
+            }
+            else{
+                    window.scrollTo(0,0);
+                    clearInterval(timer);
+            }
+        },5);
+    }
+}
+</code></pre>
+
+<p><strong>效果示例</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/backtop/2.gif" alt="" /></p>
+
+<p><a href="https://github.com/isArtJay/backtop">下载完整文件</a></p>
+
+<p>只需将这三段代码分别引入到相应的位置，如果更换图片，要注意路径是否正确。</p>
+:ET

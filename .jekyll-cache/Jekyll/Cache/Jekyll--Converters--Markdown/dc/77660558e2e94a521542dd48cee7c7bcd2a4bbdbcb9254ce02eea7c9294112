@@ -1,0 +1,48 @@
+I"�<p>我们都知道，固定高宽的 div 在网页中垂直居中很简单，相信大家也很容易的写出来，但是不是固定高宽的 div 如何垂直居中呢？我们在网页布局，特别是手机等 web 端网页经常是不固定高宽的 div，那么这些 div 如何垂直居中呢？这篇文章，我总结一下。</p>
+
+<h1 id="固定高宽垂直水平居中块级元素">固定高宽垂直水平居中（块级元素）</h1>
+
+<p><strong>Demo</strong></p>
+
+<pre><code class="language-html">&lt;div class="wrap"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.wrap {
+  background-color: greenyellow;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 100px;
+  margin-left: -100px;
+  margin-top: -50px;
+}
+</code></pre>
+
+<p><strong>效果示例</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/1.png" alt="" /></p>
+
+<h1 id="不固定高宽垂直水平居中">不固定高宽垂直水平居中</h1>
+
+<p><strong>Demo</strong></p>
+
+<pre><code class="language-html">&lt;div class="wrap"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.wrap {
+  background-color: greenyellow;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 100px;
+  margin-left: -100px;
+  margin-top: -50px;
+}
+</code></pre>
+
+<p><strong>效果示例</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/1.png" alt="" /></p>
+:ET

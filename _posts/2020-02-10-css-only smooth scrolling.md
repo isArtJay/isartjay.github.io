@@ -20,13 +20,133 @@ tags: archives
 
 如果  scroll-behavior 被设置在根元素（<html>）上，表示应用在视口（viewport）上。这时对锚点、内链触发的视口滚动同样有效。
 
-所以只需要给 html 元素设置样式 scroll-behavior: smooth ，点击内链就会触发页面的平滑滚动，很简单吧。
+所以只需要给 html 元素设置样式 scroll-behavior: smooth ，点击内链就会触发页面的平滑滚动。
+
+**Demo**
 
 ```html
+<h1>目录</h1>
+<ul id="top">
+  <li><a href="#a">第一段</a></li>
+  <li><a href="#b">第二段</a></li>
+  <li><a href="#c">第三段</a></li>
+  <li><a href="#d">第四段</a></li>
+</ul>
+<h2 id="a">第一段：</h2>
+<ul>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+</ul>
+<a href="#top">回到顶部</a>
+<h2 id="b">第二段</h2>
+<ul>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+</ul>
+<a href="#top">回到顶部</a>
+<h2 id="c">第三段</h2>
+<ul>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+</ul>
+<a href="#top">回到顶部</a>
+<h2 id="d">第四段</h2>
+<ul>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+  <li>这是一句话</li>
+</ul>
+<a href="#top">回到顶部</a>
+```
+
+```css
 html {scroll-behavior: smooth;}
 ```
 
-[Demo](https://codepen.io/yj_bian/pen/QWbaPOL)
+**效果示例**
+
+![](https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/12_smooth/1.gif)
+
+[在线Demo](https://codepen.io/yj_bian/pen/QWbaPOL)
 
 # 兼容性
 
