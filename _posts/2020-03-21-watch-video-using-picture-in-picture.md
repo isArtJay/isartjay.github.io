@@ -114,7 +114,7 @@ async function openPiP(video) {
 
 [Watch video using Picture-in-Picture](https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture)
 
-
+[浏览器中的画中画（Picture-in-Picture）模式及其 API](https://zhuanlan.zhihu.com/p/38251413)
 
 
 

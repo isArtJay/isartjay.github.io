@@ -178,10 +178,6 @@ display: -webkit-flex;
 
 # 运用 margin:auto; 进行水平垂直居中
 
-margin 的值设置为 auto，可以让我们对剩余空间进行分配！我们知道，块级元素设置为 margin:0 auto; 可以左右居中显示！那有没有办法让 margin 设置为 margin:auto; 之后，上下左右都居中呢？上下左右都居中，就可以实现我们的水平垂直居中了！
-
-答案是有的，只要我们让上下有足够的空间，就可以让 margin 的 auto 来分配上下空间。
-
 我们可以利用定位的方式，让 margin 上下左右都有足够的空间！那么就可以用 margin:auto; 来实现水平垂直居中了！
 
 **Demo**

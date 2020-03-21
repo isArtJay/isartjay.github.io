@@ -26,7 +26,7 @@
       type="image/x-icon"
     />
     
-    <title>Lien - 浅谈 CSS 水平垂直居中</title>
+    <title>Lien - 实现“文本溢出截断省略”的几种方法</title>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/002.css" />
     
@@ -99,7 +99,7 @@
             </li>
             
             <li>
-              <a href="/20200321/CSS-vertical-center" title="浅谈 CSS 水平垂直居中"
+              <a href="/20200320/CSS-vertical-center" title="浅谈 CSS 水平垂直居中"
                 ><img
                   src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
                   title="浅谈 CSS 水平垂直居中"
@@ -108,7 +108,7 @@
             </li>
             
             <li>
-              <a href="/20200320/text-overflow-ellipsis" title="实现“文本溢出截断省略”的几种方法"
+              <a href="/20200318/text-overflow-ellipsis" title="实现“文本溢出截断省略”的几种方法"
                 ><img
                   src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
                   title="实现“文本溢出截断省略”的几种方法"
@@ -238,7 +238,7 @@
             class="notselect textimg"
             src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.png"
           />
-          <h1 class="notselect posttitle">浅谈 CSS 水平垂直居中</h1>
+          <h1 class="notselect posttitle">实现“文本溢出截断省略”的几种方法</h1>
 
           <div class="iconac">
             <a href="/"
@@ -266,205 +266,312 @@
         </div>
 
         <ul class="topbar notselect">
-          <li>2020-03-21</li>
+          <li>2020-03-18</li>
         </ul>
         <div class="post_content">
-          <p>我们都知道，固定宽高的 div 在网页中水平垂直居中很简单，相信大家也很容易的写出来，但是不固定宽高的 div 如何水平垂直居中呢？我们在网页布局，特别是手机等 web 端网页经常是不固定宽高的 div，那么这些 div 如何水平垂直居中呢？这篇文章，我总结一下。</p>
+          <p>在我们的日常开发工作中，文本溢出截断省略是很常见的一种需考虑的业务场景细节。看上去 “稀松平常” ，但在实现上却有不同的区分，是单行截断还是多行截断？多行的截断判断是基于行数还是基于高度？这些问题之下，都有哪些实现方案？他们之间的差异性和场景适应性又是如何？</p>
 
-<h1 id="固定宽高水平垂直居中块级元素">固定宽高水平垂直居中（块级元素）</h1>
+<p>一般来说，在做这样文字截断效果时我们更多是希望：</p>
 
-<p><strong>Demo</strong></p>
+<ul>
+  <li>兼容性好，对各大主流浏览器有好的支持</li>
+  <li>响应式截断，根据不同宽度做出调整</li>
+  <li>文本超出范围才显示省略号，否则不显示省略号</li>
+  <li>省略号位置显示刚好</li>
+</ul>
 
-<pre><code class="language-html">&lt;div class="wrap"&gt;&lt;/div&gt;
-</code></pre>
+<p>基于上述的准则，下面我们通过编码实践，给出一些答案。</p>
 
-<pre><code class="language-css">.wrap {
-  background-color: greenyellow;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 200px;
-  height: 100px;
-  margin-left: -100px;
-  margin-top: -50px;
-}
-</code></pre>
+<h1 id="单行文本溢出省略">单行文本溢出省略</h1>
 
-<p><strong>效果示例</strong></p>
+<p><strong>核心 CSS 语句</strong></p>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/1.png" alt="" /></p>
+<ul>
+  <li>overflow: hidden；（文字长度超出限定宽度，则隐藏超出的内容）</li>
+  <li>white-space: nowrap；（设置文字在一行显示，不能换行）</li>
+  <li>text-overflow: ellipsis；（规定当文本溢出时，显示省略符号来代表被修剪的文本）</li>
+</ul>
 
-<h1 id="不固定宽高水平垂直居中">不固定宽高水平垂直居中</h1>
+<p><strong>优点</strong></p>
 
-<p>注意：这里的”不固定宽高“指的是子元素</p>
+<ul>
+  <li>兼容性好，对各大主流浏览器有好的支持</li>
+  <li>响应式截断，根据不同宽度做出调整</li>
+  <li>文本溢出范围才显示省略号，否则不显示省略号</li>
+  <li>省略号位置显示刚好</li>
+</ul>
 
-<h2 id="-方法一vertical-align-middle禁ie678">△ 方法一：vertical-align: middle（禁IE6、7、8）</h2>
+<p><strong>短板</strong></p>
 
-<pre><code class="language-html">&lt;div class="wrap"&gt;
-   &lt;div class="centered"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<ul>
+  <li>只支持单行文本截断，并不支持多行</li>
+</ul>
 
-<pre><code class="language-css">.wrap {
-  width: 400px;
-  height: 400px;
-  background-color: greenyellow;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-}
+<p><strong>适用场景</strong></p>
 
-.wrap .centered {
-  /* 如果子元素是块级元素，需要 display:inline-block; 将其变为行块级元素 */
-  display: inline-block;
-  width: 50%;
-  height: 50%;
-  background-color: #77bbdd;
-  vertical-align: middle;
-}
-
-.wrap::after {
-  content: "";
-  width: 5px;
-  line-height: 400px;
-  background-color: #77bbdd;
-}
-</code></pre>
-
-<p><strong>效果示例</strong></p>
-
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/2.png" alt="" /></p>
-
-<h2 id="-方法二table-cell">△ 方法二：table-cell</h2>
-
-<pre><code class="language-html">&lt;div class="wrap"&gt;
-   &lt;div class="centered"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<pre><code class="language-css">.wrap {
-  width: 400px;
-  height: 400px;
-  background-color: chartreuse;
-  display: table;
-  display: table-cell;
-  vertical-align: middle;
-}
-.wrap .centered {
-  width: 50%;
-  height: 50%;
-  margin: 0 auto;
-  background-color: burlywood;
-}
-</code></pre>
-
-<p><strong>效果示例</strong></p>
-
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/3.png" alt="" /></p>
-
-<h2 id="-方法三translate-终极解决方法">△ 方法三：translate() 终极解决方法</h2>
-
-<pre><code class="language-html">&lt;div class="wrap"&gt;
-   &lt;div class="centered"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<pre><code class="language-css">.wrap {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background-color: rgb(163, 240, 236);
-}
-.wrap .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: greenyellow;
-  width: 50%;
-  height: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-</code></pre>
-
-<p><strong>效果示例</strong></p>
-
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/4.png" alt="" /></p>
-
-<h1 id="css-3-不固定宽高水平垂直居中">CSS 3 不固定宽高水平垂直居中</h1>
-
-<p>在父级元素上加入下面 3 行代码，就可以实现子元素水平垂直居中。</p>
-
-<pre><code class="language-css">/* 子元素水平居中 */
-justify-content: center;
-/* 子元素垂直居中 */
-align-items: center;
-display: -webkit-flex;
-</code></pre>
+<ul>
+  <li>适用于单行文本溢出显示省略号的情况</li>
+</ul>
 
 <p><strong>Demo</strong></p>
 
-<pre><code class="language-html">&lt;div class="wrap"&gt;
-   &lt;div class="centered"&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div class="demo"&gt;
+      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-css">.wrap {
-  width: 400px;
-  height: 400px;
-  background: greenyellow;
-  justify-content: center;
-  align-items: center;
-  display: -webkit-flex;
-}
-.wrap .centered {
-  width: 50%;
-  height: 50%;
-  background: rgb(163, 240, 236);
+<pre><code class="language-css">.demo {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </code></pre>
 
 <p><strong>效果示例</strong></p>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/5.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/2.gif" alt="" /></p>
 
-<h1 id="运用-marginauto-进行水平垂直居中">运用 margin:auto; 进行水平垂直居中</h1>
+<h1 id="多行文本溢出省略-webkit-line-clamp">多行文本溢出省略（-webkit-line-clamp）</h1>
 
-<p>margin 的值设置为 auto，可以让我们对剩余空间进行分配！我们知道，块级元素设置为 margin:0 auto; 可以左右居中显示！那有没有办法让 margin 设置为 margin:auto; 之后，上下左右都居中呢？上下左右都居中，就可以实现我们的水平垂直居中了！</p>
+<p><strong>核心 CSS 语句</strong></p>
 
-<p>答案是有的，只要我们让上下有足够的空间，就可以让 margin 的 auto 来分配上下空间。</p>
+<ul>
+  <li>overflow: hidden；（文本溢出限定的宽度就隐藏内容）</li>
+  <li>-webkit-line-clamp: 2；（用来限制在一个块元素显示的文本的行数, 2 表示最多显示 2 行。 为了实现该效果，它需要组合其他的WebKit属性）</li>
+  <li>display: -webkit-box；（和 -webkit-line-clamp: 2；结合使用，将对象作为弹性伸缩盒子模型显示 ）</li>
+  <li>-webkit-box-orient: vertical；（和 -webkit-line-clamp: 2；结合使用 ，设置或检索伸缩盒对象的子元素的排列方式 ）</li>
+  <li>text-overflow: ellipsis；（多行文本的情况下，用省略号“…”隐藏溢出范围的文本)</li>
+</ul>
 
-<p>我们可以利用定位的方式，让 margin 上下左右都有足够的空间！那么就可以用 margin:auto; 来实现水平垂直居中了！</p>
+<p><strong>优点</strong></p>
+
+<ul>
+  <li>响应式截断，根据不同宽度做出调整</li>
+  <li>文本溢出范围才显示省略号，否则不显示省略号</li>
+  <li>浏览器原生实现，所以省略号位置显示刚好</li>
+</ul>
+
+<p><strong>短板</strong></p>
+
+<ul>
+  <li>兼容性一般： -webkit-line-clamp 属性只有 WebKit 内核的浏览器才支持</li>
+</ul>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/1.png" alt="" /></p>
+
+<p><strong>适用场景</strong></p>
+
+<ul>
+  <li>多适用于移动端页面，因为移动设备浏览器更多是基于 WebKit 内核</li>
+</ul>
 
 <p><strong>Demo</strong></p>
 
-<pre><code class="language-html">&lt;div class="wrap"&gt;
-   &lt;div class="centered"&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div class="demo"&gt;
+      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-css">.wrap {
+<pre><code class="language-css">.demo {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+</code></pre>
+
+<p><strong>效果示例</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/3.gif" alt="" /></p>
+
+<h1 id="多行文本溢出省略伪元素--定位">多行文本溢出省略（伪元素 + 定位）</h1>
+
+<p><strong>核心 CSS 语句</strong></p>
+
+<ul>
+  <li>position: relative; （为伪元素绝对定位）</li>
+  <li>overflow: hidden; （文本溢出限定的宽度就隐藏内容）</li>
+  <li>position: absolute;（给省略号绝对定位）</li>
+  <li>line-height: 18px; （结合元素高度,高度固定的情况下,设定行高, 控制显示行数）</li>
+  <li>height: 36px; （设定当前元素高度）</li>
+  <li>::after {} （设置省略号样式）</li>
+  <li>word-break: break-all; （如果文本中有英文，可以使一个单词能够在换行时进行拆分）</li>
+</ul>
+
+<p><strong>优点</strong></p>
+
+<ul>
+  <li>兼容性好，对各大主流浏览器有好的支持</li>
+  <li>响应式截断，根据不同宽度做出调整</li>
+</ul>
+
+<p><strong>短板</strong></p>
+
+<ul>
+  <li>无法识别文字的长短，无论文本是否溢出范围，一直显示省略号</li>
+  <li>省略号显示可能不会刚刚好，有时会遮住一半文字，跟文字没有贴合的很紧密</li>
+</ul>
+
+<p><strong>适用场景</strong></p>
+
+<ul>
+  <li>文字内容较多，确定文字内容一定会超过容器的</li>
+</ul>
+
+<p><strong>Demo</strong></p>
+
+<pre><code class="language-html">&lt;div class="demo"&gt;
+      床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.demo {
+    position: relative;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+    word-break: break-all;
+}
+.demo::after {
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 20px 1px 45px;
+    
+    /* 为了展示效果更好 */
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white), color-stop(50%, white));
+    background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+    background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+    background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+}
+</code></pre>
+
+<p><strong>效果示例</strong></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/4.gif" alt="" /></p>
+
+<h1 id="多行文本溢出省略float">多行文本溢出省略（Float）</h1>
+
+<p><strong>核心 CSS 语句</strong></p>
+
+<ul>
+  <li>line-height: 20px；（结合元素高度,高度固定的情况下,设定行高, 控制显示行数）</li>
+  <li>overflow: hidden；（文本溢出限定的宽度就隐藏内容）</li>
+  <li>float: right/left；（利用元素浮动的特性实现）</li>
+  <li>position: relative；（根据自身位置移动省略号位置, 实现文本溢出显示省略号效果）</li>
+  <li>word-break: break-all；（如果文本中有英文，可以使一个单词能够在换行时进行拆分）</li>
+</ul>
+
+<p><strong>优点</strong></p>
+
+<ul>
+  <li>兼容性好，对各大主流浏览器有好的支持</li>
+  <li>响应式截断，根据不同宽度做出调整</li>
+  <li>文本溢出范围才显示省略号，否则不显示省略号</li>
+</ul>
+
+<p><strong>短板</strong></p>
+
+<ul>
+  <li>省略号显示可能不会刚刚好，有时会遮住一半文字，跟文字没有贴合的很紧密</li>
+</ul>
+
+<p><strong>适用场景</strong></p>
+
+<ul>
+  <li>文字内容较多，确定文字内容一定会超过容器的</li>
+</ul>
+
+<p><strong>Demo</strong></p>
+
+<pre><code class="language-html">&lt;div class="demo"&gt;
+      &lt;div class="text"&gt;
+        床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光床前明月光
+      &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-css">.demo {
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.demo .text {
+  float: right;
+  margin-left: -5px;
   width: 100%;
-  height: 100%;
+  word-break: break-all;
 }
-.centered {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  background-color: greenyellow;
+.demo::before {
+  float: left;
+  width: 5px;
+  content: "";
+  height: 40px;
+}
+.demo::after {
+  float: right;
+  content: "...";
+  height: 20px;
+  line-height: 20px;
+  padding-right: 5px;
+  text-align: right;
+  width: 3em;
+  margin-left: -3em;
+  position: relative;
+  left: 100%;
+  top: -20px;
+  padding-right: 5px;
+    
+  /* 为了展示效果更好 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(255, 255, 255, 0)),
+    to(white),
+    color-stop(50%, white)
+  );
+  background: -moz-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    white 50%,
+    white
+  );
+  background: -o-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    white 50%,
+    white
+  );
+  background: -ms-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    white 50%,
+    white
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    white 50%,
+    white
+  );
 }
 </code></pre>
 
 <p><strong>效果示例</strong></p>
 
-<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/center/6.png" alt="" /></p>
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/16_text-overflow/5.gif" alt="" /></p>
+
+<p>参考文章：</p>
+
+<p><a href="https://github.com/happylindz/blog/issues/12">纯 CSS 实现多行文字截断</a></p>
+
+<p><a href="https://github.com/HenryTSZ/hello-world/issues/14">可能是最全的 “文本溢出截断省略” 方案合集</a></p>
+
+<p><a href="css/js 限制一行和多行文字数量">css/js 限制一行和多行文字数量</a></p>
   <br />
 
 <!-- 分享模块 -->
