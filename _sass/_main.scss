@@ -710,6 +710,10 @@ ul.topbar {
       margin: 0;
       padding: 0;
       line-height: 1.4em;
+      p {
+        margin: 0;
+        display: inline;
+      }
       .demo-link {
         font-size: 15px;
         text-decoration: none;
@@ -985,5 +989,22 @@ ul.topbar {
     .left {
       width: 97%;
     }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #demo-con .demo-list .demo-item .demo-link .version::before {
+    content: "";
+    margin: 0;
+  }
+
+  #demo-con .demo-list .demo-item p {
+    color: black;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
