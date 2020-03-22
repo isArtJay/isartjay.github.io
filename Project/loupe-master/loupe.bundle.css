@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after { 
   box-sizing: border-box;
 }
 
@@ -8,9 +6,7 @@
    width: 100%;
    height: 600px !important;
  }*/
-html,
-body,
-.flexContainer {
+html, body, .flexContainer {
   min-height: 100vh;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -18,12 +14,9 @@ body {
   padding: 0;
   margin: 0;
 }
-h1,
-h2,
-h3,
-h4 {
+h1,h2,h3,h4 {
   font-family: Din Alternate, Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: #666;
+color: #666;
 }
 
 .flexContainer {
@@ -36,8 +29,7 @@ h4 {
   padding-top: 32px;
 }
 
-.rowParent,
-.columnParent {
+.rowParent, .columnParent{
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -63,14 +55,14 @@ h4 {
   align-items: stretch;
 }
 
-.columnParent {
+.columnParent{
   -webkit-box-orient: vertical;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.flexChild {
+.flexChild{
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -80,24 +72,23 @@ h4 {
   align-self: auto;
 }
 
-.editorBox,
-.stackRow {
+.editorBox, .stackRow {
   -webkit-box-flex: 3;
   -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
+      -ms-flex: 3;
+          flex: 3;
   position: relative;
 }
 
 .editorBox {
-  background: #fdf6e3;
+  background: #FDF6E3;
 }
 
 .codeColumn {
   -webkit-box-flex: 0.5;
   -webkit-flex: 0.5;
-  -ms-flex: 0.5;
-  flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
   margin-right: 20px;
   border-right: 2px #ddd solid;
 }
@@ -112,8 +103,7 @@ h4 {
   white-space: pre;
   padding-left: 45px;
   color: #333;
-  font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro,
-    monospace;
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
   font-size: 12px;
   overflow-y: hidden;
   position: relative;
@@ -128,7 +118,7 @@ h4 {
   width: 41px;
   padding-left: 7.5px;
   text-align: center;
-  background: #fbf1d3;
+  background: #FBF1D3;
   height: 100%;
   white-space: pre;
 }
@@ -136,12 +126,12 @@ h4 {
 .ace-editor-wrapper {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .ace_editor {
-  line-height: 1.75 !important;
+  line-height: 1.75!important;
 }
 
 .html-scratchpad {
@@ -164,8 +154,9 @@ h4 {
   margin-right: 5px;
 }
 
+
 .webapi-code:before {
-  content: "";
+  content: '';
   display: inline-block;
   vertical-align: middle;
   height: 100%;
@@ -177,124 +168,70 @@ h4 {
   height: 44px;
 }
 
+
 @-webkit-keyframes rota {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+  0%   { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 
+
 @keyframes rota {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+  0%   { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 
 @-webkit-keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  50%,
-  100% {
-    opacity: 1;
-  }
+  0%        { opacity: 0; }
+  50%, 100% { opacity: 1; }
 }
 
 @keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  50%,
-  100% {
-    opacity: 1;
-  }
+  0%        { opacity: 0; }
+  50%, 100% { opacity: 1; }
 }
 
 @-webkit-keyframes mask {
-  0% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
+  0%        { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 @keyframes mask {
-  0% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
+  0%        { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 @-webkit-keyframes check {
-  0% {
-    opacity: 0;
-  }
-  98% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%        { opacity: 0; }
+  98%       { opacity: 0; }
+  100%      { opacity: 1; }
 }
 
 @keyframes check {
-  0% {
-    opacity: 0;
-  }
-  98% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%        { opacity: 0; }
+  98%       { opacity: 0; }
+  100%      { opacity: 1; }
 }
 
 @-webkit-keyframes background {
-  0% {
-    background: rgba(148, 255, 148, 0);
-  }
-  95% {
-    background: rgba(148, 255, 148, 0);
-  }
-  100% {
-    background: rgba(148, 255, 148, 1);
-  }
+  0% { background: rgba(148,255,148,0); }
+  95% { background: rgba(148,255,148,0); }
+  100% { background: rgba(148,255,148,1); }
 }
 
 @keyframes background {
-  0% {
-    background: rgba(148, 255, 148, 0);
-  }
-  95% {
-    background: rgba(148, 255, 148, 0);
-  }
-  100% {
-    background: rgba(148, 255, 148, 1);
-  }
+  0% { background: rgba(148,255,148,0); }
+  95% { background: rgba(148,255,148,0); }
+  100% { background: rgba(148,255,148,1); }
 }
 
 .stopwatch-wrapper {
   width: 44px;
   height: 44px;
   position: relative;
-  background: rgba(148, 255, 148, 1);
+  background: rgba(148,255,148,1);
   border-radius: 250px;
   -webkit-animation: background 10s linear;
-  animation: background 10s linear;
+          animation: background 10s linear;
   overflow: hidden;
 }
 
@@ -308,8 +245,8 @@ h4 {
   border-left: 7px white solid;
   border-bottom: 7px white solid;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   z-index: 500;
 }
 
@@ -318,7 +255,7 @@ h4 {
   width: 50%;
   height: 100%;
   position: absolute;
-  border: 8px solid rgb(148, 255, 148);
+  border: 8px solid rgb(148,255,148);
 }
 
 .stopwatch-spinner {
@@ -327,10 +264,10 @@ h4 {
   z-index: 200;
   border-right: none;
   -webkit-animation: rota 10s linear;
-  animation: rota 10s linear;
+          animation: rota 10s linear;
   -webkit-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
 }
 
 .stopwatch-filler {
@@ -339,7 +276,7 @@ h4 {
   z-index: 100;
   border-left: none;
   -webkit-animation: fill 10s steps(1, end);
-  animation: fill 10s steps(1, end);
+          animation: fill 10s steps(1, end);
   left: 50%;
   opacity: 1;
 }
@@ -352,17 +289,15 @@ h4 {
   opacity: 0;
   background: white;
   -webkit-animation: mask 10s steps(1, end);
-  animation: mask 10s steps(1, end);
+          animation: mask 10s steps(1, end);
   border-radius: 250px 0 0 250px;
 }
 
-.stopwatch-spinner,
-.stopwatch-filler,
-.stopwatch-mask,
-.stopwatch-wrapper {
+.stopwatch-spinner, .stopwatch-filler, .stopwatch-mask, .stopwatch-wrapper {
   -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+          animation-duration: 3s;
 }
+
 
 .callback-queue {
   margin-bottom: 20px;
@@ -384,7 +319,7 @@ h4 {
 }
 
 .callback-active {
-  background: rgb(220, 224, 255);
+  background: rgb(220,224,255);
 }
 
 .stackBox {
@@ -399,9 +334,7 @@ h4 {
   margin-top: 20px;
 }
 
-.stack-wrapper,
-.callback-queue,
-.webapis {
+.stack-wrapper, .callback-queue, .webapis {
   border: 2px #ddd dashed;
   position: relative;
   padding: 25px 10px 10px 10px;
@@ -425,15 +358,15 @@ h4 {
 }
 
 .webapis:before {
-  content: "Web APIs";
+  content: "Web Apis";
 }
 
 .stack-wrapper:before {
-  content: "调用栈";
+  content: "Call Stack";
 }
 
 .callback-queue:before {
-  content: "回调队列";
+  content: "Callback Queue";
 }
 
 .callback-queue.render-queue:before {
@@ -462,23 +395,24 @@ h4 {
   margin: 10px auto;
 }
 
+
 .spinner-wrapper {
   height: 76px;
   width: 76px;
   position: relative;
   padding: 9px;
   -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   margin-left: 82px;
 }
 
 .spinner-wrapper-transition {
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-transition: -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear;
+          transition: transform 0.5s linear;
 }
 
 .spinner-circle {
@@ -541,13 +475,14 @@ h4 {
 
 .code-node.running {
   background: rgba(236, 117, 74, 0.25);
-}
+} 
+
 
 /*********************************/
 .tr-webapis-enter {
-  background: rgb(255, 255, 194);
+  background: rgb(255,255,194);
   -webkit-transition: background 0.2s linear;
-  transition: background 0.2s linear;
+          transition: background 0.2s linear;
 }
 
 .tr-webapis-enter.tr-webapis-enter-active {
@@ -557,7 +492,7 @@ h4 {
 .tr-webapis-leave {
   background: white;
   -webkit-transition: background 0.01s linear;
-  transition: background 0.01s linear;
+          transition: background 0.01s linear;
 }
 
 .tr-webapis-leave.tr-webapis-leave-active {
@@ -567,7 +502,7 @@ h4 {
 .tr-webapi-spawn {
   background: white;
   -webkit-transition: background 0.1s linear;
-  transition: background 0.1s linear;
+          transition: background 0.1s linear;
 }
 
 .tr-webapi-spawn.tr-webapi-spawn-active {
@@ -576,9 +511,9 @@ h4 {
 
 /*********************************/
 .tr-queue-enter {
-  background: rgb(255, 255, 194);
+  background: rgb(255,255,194);
   -webkit-transition: background 0.2s linear;
-  transition: background 0.2s linear;
+          transition: background 0.2s linear;
 }
 
 .tr-queue-enter.tr-queue-enter-active {
@@ -587,55 +522,56 @@ h4 {
 
 .tr-queue-leave {
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
   opacity: 1;
   -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
+          transition: all 0.25s linear;
 }
 
 .tr-queue-leave.tr-queue-leave-active {
   -webkit-transform: translate(0, -100px);
-  -ms-transform: translate(0, -100px);
-  transform: translate(0, -100px);
+      -ms-transform: translate(0, -100px);
+          transform: translate(0, -100px);
   opacity: 0.01;
 }
+
 
 /*********************************/
 .tr-stack-enter {
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
   opacity: 0.01;
   -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+          transition: all 0.1s linear;
 }
 
 .tr-stack-enter.stack-item-callback {
   -webkit-transform: translate(0, 100px);
-  -ms-transform: translate(0, 100px);
-  transform: translate(0, 100px);
+      -ms-transform: translate(0, 100px);
+          transform: translate(0, 100px);
   -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
+          transition: all 0.25s linear;
 }
 
 .tr-stack-enter.tr-stack-enter-active {
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
   opacity: 1;
 }
 
 .tr-stack-leave {
   opacity: 1;
   -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+          transition: all 0.1s linear;
 }
 
 .tr-stack-leave.tr-stack-leave-active {
   opacity: 0.01;
   -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+          transition: all 0.1s linear;
 }
 
 .htmlEditorBox {
@@ -644,24 +580,9 @@ h4 {
 
 .editor-switch {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   z-index: 9999;
-}
-
-.editor-switch-nopo {
-  position: absolute;
-  top: -26px;
-  right: 0px;
-  z-index: 9999;
-}
-
-.editor-switch button,
-.editor-switch-nopo button {
-  outline: none;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  margin-left: 3px;
 }
 
 .render-queue .callback-queued {
@@ -669,16 +590,17 @@ h4 {
 }
 
 .render-queue .callback-delayed {
-  background: rgba(255, 0, 0, 0.5);
+  background: rgba(255,0,0,0.5);
   -webkit-transition: background 0.2s linear;
-  transition: background 0.2s linear;
+          transition: background 0.2s linear;
 }
 
 .render-queue .callback-rendered {
-  background: rgba(0, 255, 0, 0.5);
+  background: rgba(0,255,0,0.5);
   -webkit-transition: background 0.4s linear;
-  transition: background 0.4s linear;
+          transition: background 0.4s linear;
 }
+
 
 /*
 .tr-render-queue-enter {
@@ -704,7 +626,7 @@ h4 {
 /************************/
 
 .top-nav {
-  background: #d80;
+  background: #D80;
   padding: 5px;
   height: 32px;
   position: absolute;
@@ -725,10 +647,8 @@ h4 {
   border: none;
   background: none;
   color: #eee;
-  font-size: 25px;
-  line-height: 25px;
-  outline: none;
-  cursor: pointer;
+  font-size: 30px;
+  line-height: 30px;
   margin: 0;
   padding: 0;
   margin-right: 10px;
@@ -739,11 +659,11 @@ h4 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
+      -ms-flex: none;
+          flex: none;
   width: 200px;
   -webkit-transition: width 0.15s linear;
-  transition: width 0.15s linear;
+          transition: width 0.15s linear; 
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   background: #ddd;
   color: #666;
@@ -758,130 +678,71 @@ h4 {
   overflow: hidden;
 }
 
-.settingsColumn .setting label {
-  display: block;
-}
-
-.settingsColumn .setting label:nth-child(2) {
-  margin-top: 10px;
-}
-
-.settingsColumn .setting label:nth-child(2) input {
-  width: 14px;
-  height: 14px;
-  margin: 0 0 0 5px;
-  border: none;
-}
-
-.settingsColumn .setting label:nth-child(2) span {
-  margin-top: -5px;
-}
-
 .ReactModal__Overlay {
-  z-index: 20000;
-  background: rgba(0, 0, 0, 0.4);
+    z-index: 20000;
+    background: rgba(0,0,0,0.4);
 }
 
 .ReactModal__Content {
-  left: 20%;
-  right: 20%;
-  overflow: overlay;
-  border: none;
-  font-size: 14px;
-  border-radius: 0;
-}
-
-.ReactModal__Content::-webkit-scrollbar-track,
-.callback-queue::-webkit-scrollbar-track,
-.html-scratchpad::-webkit-scrollbar-track,
-.ace_scrollbar-h::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
-}
-
-.ReactModal__Content::-webkit-scrollbar,
-.callback-queue::-webkit-scrollbar,
-.html-scratchpad::-webkit-scrollbar,
-.ace_scrollbar-h::-webkit-scrollbar {
-  width: 4px;
-  background-color: #f5f5f5;
-}
-
-.ReactModal__Content::-webkit-scrollbar-thumb,
-.callback-queue::-webkit-scrollbar-thumb,
-.html-scratchpad::-webkit-scrollbar-thumb,
-.ace_scrollbar-h::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #f90;
-  background-image: -webkit-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-}
-
-.ReactModal__Content video {
-  outline: none;
-  display: block;
-  margin: 30px auto 20px;
+    left: 20%;
+    right: 20%;
+    border: none;
+    font-size: 14px;
 }
 
 .ReactModal__Content * {
-  color: #888;
+    color: #888;
 }
 
 .ReactModal__Content h1 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .ReactModal__Content h1 + h2 {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .ReactModal__Content h2 {
-  margin-top: 40px;
-  margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .ReactModal__Content a {
-  color: #df8900;
+    color: #DF8900;
 }
 
 .ReactModal__Content li {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .ReactModal__Content iframe {
-  margin: 40px auto;
-  max-width: 100%;
-  display: block;
-  border: none;
+    margin: 40px auto;
+    max-width: 100%;
+    display: block;
+    border: none;
 }
 
+
+
 .modal-button {
-  float: right;
+    float: right;
 }
 
 .modal-button:hover {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 p.info {
-  text-align: center;
-  margin-top: 40px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 a.modalClose {
-  position: absolute;
-  top: 25px;
-  right: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 a:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
