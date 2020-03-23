@@ -26,7 +26,7 @@
       type="image/x-icon"
     />
     
-    <title>Lien - 分享一下我の学习心得</title>
+    <title>分享一下我の学习心得</title>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/002.css" />
     
@@ -45,6 +45,91 @@
     <style>
       .gt-container .gt-comment-text {
         display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/share/css/share.min.css" />
+    <style>
+      .social-share {
+        text-align: center;
+      }
+      .social-share .icon-wechat .wechat-qrcode {
+        height: auto;
+        top: -155px;
+        left: -55px;
+        width: 140px;
+      }
+      .wechat-qrcode {
+        cursor: default;
+      }
+      .social-share .social-share-icon {
+        color: white;
+        border: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 28px;
+      }
+      .shareto {
+        cursor: default;
+      }
+      .social-share .social-share-icon:hover {
+        opacity: 0.8;
+        transform: translateY(-4px);
+        transition: ease-in 0.2s;
+      }
+      .social-share .icon-wechat:hover {
+        opacity: 1;
+      }
+      @media only screen and (max-width: 700px) {
+        .social-share .social-share-icon:hover {
+          opacity: 1;
+          transform: translateY(0);
+          transition: none;
+          outline: none;
+        }
+      }
+      .social-share .icon-weibo {
+        background-color: #ff9933;
+      }
+      .social-share .icon-qzone {
+        background-color: #f1c40f;
+      }
+      .social-share .icon-wechat {
+        background-color: #4ec034;
+      }
+      .social-share .icon-facebook {
+        background-color: #4267b2;
+      }
+      .social-share .icon-twitter {
+        background-color: #55acee;
+      }
+      .social-share .icon-weibo:before,
+      .social-share .icon-qzone:before,
+      .social-share .icon-wechat:before,
+      .social-share .icon-facebook:before,
+      .social-share .icon-twitter:before {
+        content: "";
+      }
+      .social-share-icon img {
+        width: 70%;
+        margin-top: 4px;
+      }
+      .social-share .icon-qzone img {
+        width: 63%;
+        margin-top: 5px;
+      }
+      .social-share .icon-wechat img {
+        width: 63%;
+        margin-top: 6px;
+      }
+      .social-share .icon-facebook img {
+        width: 74%;
+        margin-top: 4px;
+      }
+      .social-share .icon-twitter img {
+        width: 74%;
+        margin-top: 4px;
       }
     </style>
   </head>
@@ -328,11 +413,50 @@
 </ul>
 
   <br />
+<br />
+<br />
 
-<!-- 分享模块 -->
-<div class="share">
+<!-- 分享模块二维码 -->
+<!-- <div class="share">
   分享
   <div id="qrcode"></div>
+</div> -->
+
+<!-- 分享模块按钮 -->
+<div
+  class="social-share"
+  data-initialized="true"
+  data-image="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/logo.png"
+>
+  <span class="shareto notselect">分享到：</span>
+
+  <a href="#" class="social-share-icon icon-weibo">
+    <img
+      src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/share_img/weibo.svg"
+      alt=""
+    />
+  </a>
+  <a href="#" class="social-share-icon icon-qzone">
+    <img
+      src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/share_img/qzone.svg"
+      alt=""
+    />
+  </a>
+  <a href="#" class="social-share-icon icon-wechat"
+    ><img
+      src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/share_img/wechat.svg"
+      alt=""
+  /></a>
+  <a href="#" class="social-share-icon icon-facebook"
+    ><img
+      src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/share_img/facebook.svg"
+      alt=""
+  /></a>
+  <a href="#" class="social-share-icon icon-twitter"
+    ><img
+      src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/share_img/twitter.svg"
+      alt=""
+  /></a>
 </div>
 
 <hr />
@@ -431,6 +555,19 @@
       async
       src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/js/busuanzi.pure.mini.js"
     ></script>
+    <script src="/assets/share/js/social-share.min.js"></script>
+
+    <!-- 分享初始化 -->
+    <script>
+      var $config = {
+        origin: "yj_bian", // 分享 @ 相关 twitter 账号
+        sites: ["weibo", "qzone", "wechat", "facebook", "twitter"],
+        wechatQrcodeTitle: "请打开微信扫一扫", // 微信二维码提示文字
+        wechatQrcodeHelper: ""
+      };
+
+      socialShare(".social-share", $config);
+    </script>
 
     <!-- 代码高亮 -->
     <script>
