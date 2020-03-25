@@ -1,5 +1,0 @@
----
-layout: Resource
-title: Resource
----
-
