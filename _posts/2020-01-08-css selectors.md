@@ -464,7 +464,7 @@ p::after{
 
 ## 2、::before(:before)
 
-使用 ::before 会创建一个伪元素，该伪元素会成为选中元素的最后一个子元素
+使用 ::before 会创建一个伪元素，该伪元素会成为选中元素的第一个子元素
 
 ```html
 <div class="list">
