@@ -1009,3 +1009,20 @@ ul.topbar {
     white-space: nowrap;
   }
 }
+
+.find_me_list {
+  box-sizing: border-box;
+  width: 266px;
+  margin: 20px auto;
+  a {
+    width: 24px;
+    float: left;
+    display: inline;
+    text-align: center;
+    margin: 0 5px;
+    padding: 2px;
+    img {
+      width: 24px;
+    }
+  }
+}

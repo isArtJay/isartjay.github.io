@@ -54,9 +54,9 @@
       }
       .social-share .icon-wechat .wechat-qrcode {
         height: auto;
-        top: -155px;
-        left: -55px;
-        width: 140px;
+        top: -125px;
+        left: -49px;
+        width: 120px;
       }
       .wechat-qrcode {
         cursor: default;
@@ -75,7 +75,7 @@
       }
       .social-share .social-share-icon:hover {
         opacity: 0.8;
-        transform: translateY(-4px);
+        /* transform: translateY(-4px); */
         transition: ease-in 0.2s;
       }
       .social-share .icon-wechat:hover {
@@ -369,7 +369,22 @@
 <section id="demo-con">
   <ul class="demo-list">
     <li class="demo-item">
-      <!-- https://github.com/isArtJay/date-calculator -->
+      <a
+        class="demo-link"
+        href="https://www.lien.run/Project/emoji/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="name">favicon.svg</span>
+        <p>
+          <span class="version">1.0.0</span>
+          <span class="desc">将网页的favicon图标换成动态的emoji表情</span>
+        </p>
+        <div class="clear"></div>
+      </a>
+    </li>
+
+    <li class="demo-item">
       <a
         class="demo-link"
         href="https://www.lien.run/Project/date-calculator/"
@@ -386,7 +401,6 @@
     </li>
 
     <li class="demo-item">
-      <!-- https://github.com/isArtJay/page-minimap -->
       <a
         class="demo-link"
         href="https://www.lien.run/Project/page-minimap/"
@@ -402,7 +416,6 @@
     </li>
 
     <li class="demo-item">
-      <!-- https://github.com/isArtJay/typewriter -->
       <a
         class="demo-link"
         href="https://www.lien.run/Project/typewriter/"
@@ -418,7 +431,6 @@
     </li>
 
     <li class="demo-item">
-      <!-- https://github.com/isArtJay/simple-zanshang -->
       <a
         class="demo-link"
         href="https://www.lien.run/Project/reward/"
@@ -457,6 +469,7 @@
       src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/js/busuanzi.pure.mini.js"
     ></script>
     <script src="/assets/share/js/social-share.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
     <!-- 分享初始化 -->
     <script>

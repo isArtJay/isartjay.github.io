@@ -1,4 +1,4 @@
-I"�K<h1 id="css-常用伪类和伪元素">CSS 常用伪类和伪元素</h1>
+I"�K<h1 id="css-常用伪类和伪元素">CSS 常用伪类和伪元素</h1>
 
 <h1 id="伪类">伪类</h1>
 
@@ -398,7 +398,7 @@
 
 <h2 id="2beforebefore">2、::before(:before)</h2>
 
-<p>使用 ::before 会创建一个伪元素，该伪元素会成为选中元素的最后一个子元素</p>
+<p>使用 ::before 会创建一个伪元素，该伪元素会成为选中元素的第一个子元素</p>
 
 <pre><code class="language-html">&lt;div class="list"&gt;
      &lt;div class="square"&gt;&lt;/div&gt;
