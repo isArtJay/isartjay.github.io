@@ -279,5 +279,3 @@ tags: archives
 [纯 CSS 实现多行文字截断](https://github.com/happylindz/blog/issues/12)
 
 [可能是最全的 “文本溢出截断省略” 方案合集](https://github.com/HenryTSZ/hello-world/issues/14)
-
-[css/js 限制一行和多行文字数量](css/js 限制一行和多行文字数量)
