@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC TAC TOE 井字棋</title>
+    <link
+      rel="stylesheet"
+      href="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/project/TIC_TAC_TOE/tic-tac-toe.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/project/TIC_TAC_TOE/favicon.ico"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="game_name">TIC TAC TOE &nbsp;井字棋</h1>
+
+      <table class="board">
+        <tbody>
+          <tr>
+            <td>
+              <div id="0" class="square "></div>
+            </td>
+            <td>
+              <div id="1" class="square "></div>
+            </td>
+            <td>
+              <div id="2" class="square "></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="3" class="square "></div>
+            </td>
+            <td>
+              <div id="4" class="square "></div>
+            </td>
+            <td>
+              <div id="5" class="square "></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="6" class="square "></div>
+            </td>
+            <td>
+              <div id="7" class="square "></div>
+            </td>
+            <td>
+              <div id="8" class="square "></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="messageBox"></div>
+
+      <div class="controls">
+        <button class="button" onclick="resetGame()">开始</button>
+
+        <select id="difficulty" class="difficulty">
+          <option value="moron" selected="">小白</option>
+          <option value="genius">大师</option>
+        </select>
+      </div>
+    </main>
+
+    <script
+      async
+      src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/project/TIC_TAC_TOE/tic-tac-toe.js"
+    ></script>
+  </body>
+</html>

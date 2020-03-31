@@ -1,0 +1,198 @@
+I"$<p>VuePress是以 Vue 驱动的静态网站生成器，是一个由 Vue、Vue Router 和 webpack 驱动的单页应用。在VuePress中，你可以使用Markdown编写文档，然后生成网页。</p>
+
+<p>每一个由 VuePress 生成的页面都带有预渲染好的 HTML，也因此具有非常好的加载性能和搜索引擎优化（SEO）。同时，一旦页面被加载，Vue 将接管这些静态内容，并将其转换成一个完整的单页应用（SPA），其他的页面则会只在用户浏览到的时候才按需加载。</p>
+
+<p><a href="https://vuepress.vuejs.org/zh/">官方文档</a></p>
+
+<h1 id="vuepress特性">VuePress特性</h1>
+
+<ul>
+  <li>为技术文档而优化的内置Markdown拓展</li>
+  <li>在Markdown文件中使用Vue组件的能力</li>
+  <li>Vue驱动的自定义主题系统</li>
+  <li>自动生成Service Worker(支持PWA)</li>
+  <li>Google Analytics集成</li>
+  <li>基于Git的”最后更新时间”</li>
+  <li>多语言支持</li>
+  <li>响应式布局</li>
+</ul>
+
+<h1 id="一开始搭建">一、开始搭建</h1>
+
+<h2 id="环境依赖">环境依赖</h2>
+
+<p>VuePress 支持使用 yarn 和 npm 来安装，Node.js版本需要在 8.0 以上才可以。</p>
+
+<p>如果没有安装 Node.js，可在 <a href="https://nodejs.org/zh-cn/">Node.js官网</a> 根据自己的操作系统下载安装。安装完成后，可以在终端使用 node -v 命令来查看 Node.js 版本：</p>
+
+<h2 id="全局安装vuepress">全局安装VuePress</h2>
+
+<p>​</p>
+
+<pre><code>yarn global add vuepress
+</code></pre>
+
+<p>或者：</p>
+
+<pre><code class="language-shell">npm install -g vuepress
+</code></pre>
+
+<h2 id="创建项目目录">创建项目目录</h2>
+
+<p>可以手动右键新建，也可以使用下面的命令新建文件夹：</p>
+
+<pre><code class="language-shell">mkdir project &amp;&amp; cd project
+</code></pre>
+
+<h2 id="初始化项目">初始化项目</h2>
+
+<pre><code class="language-shell">yarn init -y
+</code></pre>
+
+<p>或者：</p>
+
+<pre><code class="language-shell">npm init -y
+</code></pre>
+
+<p>这时 project 文件夹下将会出现一个 package.json 文件，长这样子：</p>
+
+<pre><code class="language-json">{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
+</code></pre>
+
+<h2 id="在-project-的目录下新建-docs-文件夹">在 project 的目录下新建 docs 文件夹</h2>
+
+<p>docs 文件夹作为项目文档根目录，主要放置 Markdown 类型的文章和 .vuepress 文件夹。</p>
+
+<pre><code>mkdir docs
+</code></pre>
+
+<h2 id="在-docs-的目录下新建-vuepress-文件夹">在 docs 的目录下新建 .vuepress 文件夹</h2>
+
+<p>所有 VuePress 相关的文件都将会被放在这里</p>
+
+<pre><code>mkdir .vuepress
+</code></pre>
+
+<h2 id="在-vuepress-文件夹下面创建-configjs-文件">在 .vuepress 文件夹下面创建 config.js 文件</h2>
+
+<p>config.js 是一个 VuePress 网站必要的配置文件，它导出一个 JavaScript 对象</p>
+
+<pre><code>echo test&gt;config.js
+</code></pre>
+
+<h2 id="在-vuepress-文件夹下面创建-public-文件夹">在 .vuepress 文件夹下面创建 public 文件夹</h2>
+
+<p>这个文件夹是用来放置静态资源的，例如 favicons 和 PWA 的图标，打包出来之后会放在 .vuepress/dist/ 的根目录下</p>
+
+<pre><code>mkdir public
+</code></pre>
+
+<h2 id="创建首页-像vuepress文档主页一样">创建首页 (像VuePress文档主页一样)</h2>
+
+<p>在 docs 文件夹下面创建一个 README.md 文件</p>
+
+<p>默认的主题提供了一个首页，像下面一样设置 home:true 即可，可以把下面的设置放入 README.md 中，待会儿你将会看到跟 VuePress 一样的主页。</p>
+
+<pre><code>---
+home: true
+heroImage: /logo.jpg
+actionText: 快速上手 →
+actionLink: /zh/guide/
+features:
+- title: 简洁至上
+  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: Vue驱动
+  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+- title: 高性能
+  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
+</code></pre>
+
+<p><strong>注意：</strong>上边第 3 行的 heroImage 引入的是一张图片，所以你需要放一张图片到 public 文件夹中</p>
+
+<h2 id="ok--我们的项目结构已经搭好了">OK ! 我们的项目结构已经搭好了</h2>
+
+<pre><code>project
+├─── docs
+│   ├── README.md
+│   └── .vuepress
+│       ├── public
+│       └── config.js
+└── package.json
+</code></pre>
+
+<h2 id="在-packagejson-里添加两个启动命令">在 package.json 里添加两个启动命令</h2>
+
+<p>VuePress 中有两个命令：</p>
+
+<ul>
+  <li>vuepress dev docs 命令运行本地服务，通过访问 http://localhost:8080 即可预览网站</li>
+  <li>vuepress build docs 命令用来生成静态文件，默认放置在 docs/.vuepress/dist 目录中</li>
+</ul>
+
+<p>将下边的代码加入到你的 package.json 配置里：</p>
+
+<pre><code>"scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+}
+</code></pre>
+
+<p>现在你的 package.json 长这样：</p>
+
+<pre><code>{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
+</code></pre>
+
+<h2 id="启动你的-vuepress">启动你的 VuePress</h2>
+
+<p>默认是 localhost:8080 端口。</p>
+
+<p>先进入 docs 文件夹：</p>
+
+<pre><code>cd docs
+</code></pre>
+
+<p>然后输入下边的命令运行，下面就可以开始写作了：</p>
+
+<pre><code>yarn docs:dev
+</code></pre>
+
+<p>或者：</p>
+
+<pre><code>npm run docs:dev
+</code></pre>
+
+<h1 id="二配置">二、配置</h1>
+
+<h2 id="configjs-配置">config.js 配置</h2>
+
+<p>config.js 的主要配置包括网站的标题、描述等基本信息，以及主题的配置。具体配置详情请看文档：<a href="https://vuepress.vuejs.org/zh/config/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">配置</a></p>
+
+<h2 id="构建">构建</h2>
+
+<p>build 生成静态的 HTML 文件，默认会在 docs/.vuepress/dist 文件夹下</p>
+
+<pre><code>yarn docs:build
+</code></pre>
+
+<p>或者：</p>
+
+<pre><code>npm run docs:build
+</code></pre>
+
+:ET
