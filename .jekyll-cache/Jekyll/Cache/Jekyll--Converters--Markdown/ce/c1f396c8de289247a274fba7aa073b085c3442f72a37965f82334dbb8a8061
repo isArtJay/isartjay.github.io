@@ -1,0 +1,20 @@
+I"�<h1 id="下载及安装">下载及安装</h1>
+
+<p>1、先去<a href="https://nodejs.org/en/download/">官网下载</a>对应系统安装包</p>
+
+<p>2、安装时建议修改安装目录，不建议放在 C 盘，一路默认安装即可，npm 会随nodejs一起安装</p>
+
+<p>3、安装完成后启动命令行工具，输入 node -v 和 npm -v 查看安装版本，出现提示版本信息即为安装成功</p>
+
+<h1 id="环境配置">环境配置</h1>
+
+<p>这里主要配置的是 npm 安装的全局模块所在的路径，以及缓存 cache 的路径。之所以要配置，是因为以后在执行类似：npm install 模块名 [-g] 的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中，会占C盘空间。</p>
+
+<p>本文是将 nodejs 安装在 D:\nodejs 目录下，以下操作可根据实际安装目录进行对应调整：</p>
+
+<p>1、在安装目录下，如 D:\nodejs 新建两个文件夹 node_global (全局包存放目录) 和 node_cache (缓存目录)</p>
+
+<p>2、打开命令行工具，执行以下两句操作： <code>npm config set prefix "D:\soft\nodejs\node_global"</code><code>npm config set cache "D:\soft\nodejs\node_cache"</code>；</p>
+
+<p>3、配置环境变量：</p>
+:ET
