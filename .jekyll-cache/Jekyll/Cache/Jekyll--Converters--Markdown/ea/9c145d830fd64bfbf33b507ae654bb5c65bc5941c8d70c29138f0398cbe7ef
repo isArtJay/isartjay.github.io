@@ -1,0 +1,18 @@
+I"�<p>最近读到一篇趣文，各种恶搞 Github 的『Public contributions』，下面截取几个小伙伴的战绩：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/01.jpg" alt="" /></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/02.jpg" alt="" /></p>
+
+<p>顺藤摸瓜，发现原来有人已经做出工具啦，名叫 <a href="https://github.com/gelstudios/gitfiti">gitfiti</a>。主要对应预先定义的模板，进行相应日期的 commit 操作，push 至 Github 后在贡献栏中生成相应像素点，并且利用 Github 贡献数不同颜色深度不同的机制，就可以在自己的贡献栏里面看见像素画了。</p>
+
+<h1 id="一下载插件">一、下载插件</h1>
+
+<p>直接 clone ：</p>
+
+<pre><code class="language-shell">git clone git@github.com:gelstudios/gitfiti.git
+</code></pre>
+
+<p>或者：</p>
+
+:ET

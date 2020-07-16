@@ -1,0 +1,79 @@
+I"8<p>最近读到一篇趣文，各种恶搞 Github 的『Public contributions』，下面截取几个小伙伴的战绩：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/01.jpg" alt="" /></p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/02.jpg" alt="" /></p>
+
+<p>顺藤摸瓜，发现原来有人已经做出工具啦，名叫 <a href="https://github.com/gelstudios/gitfiti">gitfiti</a>。主要对应预先定义的模板，进行相应日期的 commit 操作，push 至 Github 后在贡献栏中生成相应像素点，并且利用 Github 贡献数不同颜色深度不同的机制，就可以在自己的贡献栏里面看见像素画了。</p>
+
+<h1 id="一下载插件">一、下载插件</h1>
+
+<p>直接 clone：</p>
+
+<pre><code class="language-shell">git clone git@github.com:gelstudios/gitfiti.git
+</code></pre>
+
+<p>或者点击 Github 页面的下载链接将整个项目下载到本地：</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/03.png" alt="" /></p>
+
+<h1 id="二新建仓库">二、新建仓库</h1>
+
+<p>在自己的 Github 中创建一个新的 repo，名字自取，不要创建 license 和 readme（防止后面 push 的时候产生冲突）。</p>
+
+<h1 id="三运行-gitfitipy">三、运行 gitfiti.py</h1>
+
+<p>下载到本地后在命令行中运行 gitfiti.py，显出欢迎界面，此时第一条交互信息不用填写什么内容，直接回车即可。</p>
+
+<pre><code class="language-shell">python gitfiti.py
+</code></pre>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/04.jpg" alt="" /></p>
+
+<h1 id="四输入-github-用户信息">四、输入 Github 用户信息</h1>
+
+<p>接着输入自己的 Github 用户名和刚刚新建的 repo 名</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/05.jpg" alt="" /></p>
+
+<h1 id="五输入绘图信息">五、输入绘图信息</h1>
+
+<p>选择从哪里开始绘图，输入一个数字，代表从贡献栏的第几周开始（从左开始数）；如果此处不输入直接回车则默认从最左边开始。</p>
+
+<p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/06.jpg" alt="" /></p>
+
+<h1 id="六选择最大贡献数">六、选择最大贡献数</h1>
+
+<p>接下来会提醒你，对比你已有的贡献后，一天中最大的贡献数是多少，然后让你选择本次绘图生成的像素点的最大贡献数（Github 的像素块颜色机制为贡献相对越大的那天颜色越深）。</p>
+
+<p>建议此处直接使用自己的最大贡献数，否则自己之前的贡献就全部变成浅绿了。</p>
+
+<p>此处输入 gitfiti 就表示使用自己的最大贡献数。</p>
+
+<p><img src="" alt="" /></p>
+
+<h1 id="七选择绘图模板">七、选择绘图模板</h1>
+
+<p>此处可以使用自定义模板或者开发者已经设定好的模板。</p>
+
+<p><img src="" alt="" /></p>
+
+<p>要使用自定义模板，就在上面那一行中输入模板的文件路径，自定义模板的方法可以参见<a href="https://github.com/gelstudios/gitfiti">该项目的说明页</a>。</p>
+
+<p>如果使用开发者设定的模板，上面一行就直接回车，然后下面选择模板，输入心仪的模板名字（模板名对应图案效果同样参见<a href="https://github.com/gelstudios/gitfiti">该项目的说明页</a>）。</p>
+
+<h1 id="八运行-gitfitish-脚本">八、运行 gitfiti.sh 脚本</h1>
+
+<p>一切搞定后，项目会自动生成一个 shell 脚本 gitfiti.sh，接下来运行这个脚本便可以自动commit 并 push 至你新建的那个 repo，等待一段时间，你便能在自己的贡献栏看见有趣的像素画啦。</p>
+
+<p><img src="" alt="" /></p>
+
+<h1 id="九注意">九、注意</h1>
+
+<p><strong>2 个问题：</strong></p>
+
+<p>①：</p>
+
+<p>②：</p>
+
+:ET

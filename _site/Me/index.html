@@ -144,7 +144,7 @@
           /></a>
 
           
-          <a href="/" class="logo "><h1>Lien</h1></a>
+          <a href="/" class="logo"><h1>Lien</h1></a>
           
           <!-- <p id="typew" class="notselect">
             <span id="words"></span><span id="cursor">|</span>
@@ -173,6 +173,15 @@
         <div class="post_list" id="post_list">
            
           <ul>
+            
+            <li>
+              <a href="/20200716/egao-github" title="恶搞 GitHub 贡献图"
+                ><img
+                  src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/assets/img/file.ico"
+                  title="恶搞 GitHub 贡献图"
+                />恶搞 GitHub 贡献图</a
+              >
+            </li>
             
             <li>
               <a href="/20200407/install-mongodb" title="windows下安装 MongoDB"
@@ -331,7 +340,7 @@
            
         </div>
         <div class="post_total notselect">
-           17 article(s) 
+           18 article(s) 
         </div>
       </div>
       
@@ -403,7 +412,7 @@
 <p>我会在网站中主要分享和讨论技术，特别是web前端技术。</p>
 
 <h1>Me off the net...</h1>
-<p>除了程序之外，我也很喜欢摄影、阅读（文学类）。</p>
+<p>除了程序之外，我也很喜欢摄影、阅je读（文学类）。</p>
 <p>
   其它的一些小愿望：交一个外国朋友、去趟地中海、开一家民宿和写一本自己的电子书。
 </p>
@@ -716,7 +725,7 @@
     <!-- 百度统计 -->
     <script>
       var _hmt = _hmt || [];
-      (function() {
+      (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?f94d70e64e0cdded2a44e932a70283f9";
         var s = document.getElementsByTagName("script")[0];
@@ -726,7 +735,7 @@
 
     <!-- 百度自动推送 -->
     <script>
-      (function() {
+      (function () {
         var bp = document.createElement("script");
         var curProtocol = window.location.protocol.split(":")[0];
         if (curProtocol === "https") {
@@ -756,7 +765,7 @@
         owner: "isArtJay",
         admin: ["isArtJay"],
         id: location.pathname,
-        distractionFreeMode: false
+        distractionFreeMode: false,
       });
       gitalk.render("gitalk-container");
     </script>
@@ -767,7 +776,7 @@
         origin: "yj_bian",
         sites: ["weibo", "qzone", "wechat", "facebook", "twitter"],
         wechatQrcodeTitle: "微信扫一扫",
-        wechatQrcodeHelper: ""
+        wechatQrcodeHelper: "",
       };
       socialShare(".social-share", $config);
     </script>
@@ -783,10 +792,10 @@
     <!-- 禁止图片右键 -->
     <script>
       var imgs = $("img");
-      imgs.on("contextmenu", function() {
+      imgs.on("contextmenu", function () {
         return false;
       });
-      imgs.on("dragstart", function() {
+      imgs.on("dragstart", function () {
         return false;
       });
     </script>
@@ -805,19 +814,19 @@
             "MySQL",
             "Linux",
             "Git",
-            "Markdown"
+            "Markdown",
           ],
           datasets: [
             {
-              data: [80, 85, 75, 75, 70, 65, 70, 95]
-            }
-          ]
+              data: [80, 85, 75, 75, 70, 65, 70, 95],
+            },
+          ],
         },
         options: {
           showLegend: false,
           innerRadius: 0.5,
-          legendPosition: chartXkcd.config.positionType.upRight
-        }
+          legendPosition: chartXkcd.config.positionType.upRight,
+        },
       });
     </script>
   </body>
