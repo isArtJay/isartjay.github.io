@@ -1,4 +1,4 @@
-I"�<h1 id="下载及安装">下载及安装</h1>
+I"�<h1 id="下载及安装">下载及安装</h1>
 
 <p>1、先去<a href="https://nodejs.org/en/download/">官网下载</a>对应系统安装包</p>
 
@@ -33,9 +33,9 @@
 
 <p>2、打开命令行（cmd）工具，依次执行以下两行命令：</p>
 
-<pre><code>npm config set prefix "D:\nodejs\node_global"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set prefix "D:\nodejs\node_global"
 npm config set cache "D:\nodejs\node_cache"
-</code></pre>
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/nodejs_install/20200401153225.jpg" alt="" /></p>
 
@@ -68,15 +68,15 @@ npm config set cache "D:\nodejs\node_cache"
 
 <p>使用官方推荐的 cnpm 命令行工具代替默认的 npm：</p>
 
-<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/nodejs_install/20200401153809.jpg" alt="" /></p>
 
 <p>下面就可以使用 【cnpm install 模块名 -g】  命令安装模块了，假如先安装个 express：</p>
 
-<pre><code>cnpm install express -g
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cnpm install express -g
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/nodejs_install/20200401160307.jpg" alt="" /></p>
 
@@ -88,12 +88,12 @@ npm config set cache "D:\nodejs\node_cache"
 
 <p>有时用 cnpm 安装模块时的路径可能会存在问题，导致使用 react-native 开发应用时出现问题。此时可以用 nrm 切换回官方源：</p>
 
-<pre><code>npx nrm use npm
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx nrm use npm
+</code></pre></div></div>
 
 <p>如果再想切换回淘宝源，可以输入以下命令：</p>
 
-<pre><code>npx nrm use taobao
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npx nrm use taobao
+</code></pre></div></div>
 
 :ET

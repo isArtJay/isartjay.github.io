@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "CSS3 conic-gradient 圆锥渐变"
-tags: archives
+layout: post
 ---
 
 # CSS3 conic-gradient 圆锥渐变

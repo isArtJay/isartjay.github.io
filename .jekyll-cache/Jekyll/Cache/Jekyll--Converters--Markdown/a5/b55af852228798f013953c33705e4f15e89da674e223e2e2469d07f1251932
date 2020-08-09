@@ -1,4 +1,4 @@
-I"q!<h1 id="一台电脑管理两个-github-帐号">一台电脑管理两个 GitHub 帐号</h1>
+I"'<h1 id="一台电脑管理两个-github-帐号">一台电脑管理两个 GitHub 帐号</h1>
 
 <p>出于各种原因，有些人会有多个 GitHub 账号，比如一个个人账号，一个工作账号。而 GitHub 是不允许两个账号出现相同的 SSH key 的。</p>
 
@@ -29,8 +29,8 @@
 
 <p>windows 下打开 Git bash，进入 .ssh 目录：</p>
 
-<pre><code>ls ~/.ssh
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls ~/.ssh
+</code></pre></div></div>
 
 <p>如果看到 id_rsa 与 id_rsa.pub 则说明已经有一对密钥，那么你可以跳过步骤 2，直接进入步骤 3。</p>
 
@@ -38,8 +38,8 @@
 
 <h2 id="2生成密钥">2、生成密钥</h2>
 
-<pre><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa -C "artjay.code@gmail.com"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa -C "artjay.code@gmail.com"
+</code></pre></div></div>
 
 <p>解释几个参数：</p>
 
@@ -51,15 +51,15 @@
 
 <p>接着它会提示你输入两次密码（该密码是你 push 文件的时候要输入的密码，而不是 GitHub 管理者的密码），你也可以不输入密码（推荐），直接按回车。那么push的时候就不需要输入密码，可以直接提交到 GitHub 上：</p>
 
-<pre><code>Enter passphrase (empty for no passphrase): 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter passphrase (empty for no passphrase): 
 Enter same passphrase again:
-</code></pre>
+</code></pre></div></div>
 
 <p>如果一切顺利的话，再次进入 .ssh 目录，你会看到里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的密钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。</p>
 
 <p>之后会显示如下提示，表示 SSH key 已经创建成功：</p>
 
-<pre><code>Your identification has been saved in /c/Users/BLUE/.ssh/id_rsa.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your identification has been saved in /c/Users/BLUE/.ssh/id_rsa.
 Your public key has been saved in /c/Users/BLUE/.ssh/id_rsa.pub.
 The key fingerprint is:
 SHA256:rxneWu2eUcd6M5DKFt2J9aeDZhxpNczajN89HRoqZZg artjay.code@gmail.com
@@ -75,14 +75,14 @@ The key's randomart image is:
 |      o X *      |
 |      .o B..     |
 +----[SHA256]-----+
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="3生成新的密钥">3、生成新的密钥</h2>
 
 <p>步骤 2 中你已经有了一对密钥，现在我们再生成一对新的密钥，并命名为 id_rsa_2：</p>
 
-<pre><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa_2 -C "artjay.photo@gmail.com"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa_2 -C "artjay.photo@gmail.com"
+</code></pre></div></div>
 
 <p><strong>注意：</strong>这里我们只需修改两个地方就行：</p>
 
@@ -92,7 +92,7 @@ The key's randomart image is:
 
 <p>之后可以看到新的 SSH key 已经创建成功：</p>
 
-<pre><code>Your identification has been saved in /c/Users/BLUE/.ssh/id_rsa_2.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your identification has been saved in /c/Users/BLUE/.ssh/id_rsa_2.
 Your public key has been saved in /c/Users/BLUE/.ssh/id_rsa_2.pub.
 The key fingerprint is:
 SHA256:rxneWu2eUcd6M5DKFt2J9aeDZhxpNczajN89HRoqZZg artjay.photo@gmail.com
@@ -108,19 +108,19 @@ The key's randomart image is:
 |       . *o+ o o+|
 |        =...+    |
 +----[SHA256]-----+
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="4更改本地的-ssh-配置">4、更改本地的 SSH 配置</h2>
 
 <p>在 .ssh 文件夹下新建 config 文件并编辑，另不同的 Host 实际映射到同一个 HostName，但密钥不同，Host 前缀可自定义：</p>
 
-<pre><code>cd ~/.ssh
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.ssh
 vim config
-</code></pre>
+</code></pre></div></div>
 
 <p>上面的命令是在 .ssh 配置目录（如果不存在）创建一个 config 文件，并用 vim 打开编辑，并通过 vim 编辑加入如下配置：</p>
 
-<pre><code># 第一个ssh密钥（默认）                                                                      
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 第一个ssh密钥（默认）                                                                      
 Host github.com
 HostName github.com
 User git
@@ -132,7 +132,7 @@ Host photo.github.com
 HostName github.com
 User git
 IdentityFile ~/.ssh/id_rsa_2
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="5将两个密钥对中的-id_rsapubid_rsa_2pub-的内容分别加到两个github账号配置下">5、将两个密钥对中的 id_rsa.pub，id_rsa_2.pub 的内容分别加到两个GitHub账号配置下</h2>
 
@@ -148,26 +148,26 @@ IdentityFile ~/.ssh/id_rsa_2
 
 <h2 id="6分别测试两个密钥的ssh链接">6、分别测试两个密钥的ssh链接</h2>
 
-<pre><code>ssh -T git@github.com
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
 ssh -T git@photo.github.com
-</code></pre>
+</code></pre></div></div>
 
 <p>当你输入以上代码时，会有一段警告代码，如：</p>
 
-<pre><code>The authenticity of host 'github.com (52.250.177.223)' can't be established.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The authenticity of host 'github.com (52.250.177.223)' can't be established.
 RSA key fingerprint is SHA256:rxneWu2eUcd6M5DKFt2J9aeDZhxpNczajN89HRoqZZg.
 Are you sure you want to continue connecting (yes/no)?
-</code></pre>
+</code></pre></div></div>
 
 <p>这是正常的，输入 yes 回车既可。如果你创建 SSH key 的时候设置了密码，接下来就会提示你输入密码，如：</p>
 
-<pre><code>Enter passphrase for key '/c/Users/BLUE/.ssh/id_rsa':
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter passphrase for key '/c/Users/BLUE/.ssh/id_rsa':
+</code></pre></div></div>
 
 <p>密码正确后你会看到下边这句话，表示连接成功：</p>
 
-<pre><code>Hi isArtJay! You've successfully authenticated, but GitHub does not provide shell access.
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi isArtJay! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div></div>
 
 <h2 id="7克隆新的项目">7、克隆新的项目</h2>
 
@@ -177,27 +177,27 @@ Are you sure you want to continue connecting (yes/no)?
 
 <p>一般情况下，我们是通过如下的方式克隆一个项目：</p>
 
-<pre><code>git clone git@github.com:your-account/your-prj.git
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:your-account/your-prj.git
+</code></pre></div></div>
 
 <p>在我们有两个密钥的情况下（使用非默认密钥时），我们需要对这个语句中的域名部分做一下修改：</p>
 
-<pre><code>git clone git@xxxx:your-account/your-prj.git
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@xxxx:your-account/your-prj.git
+</code></pre></div></div>
 
 <p><strong>注意：</strong>这里的 xxxx 是你更改本地的 SSH 配置时（步骤4，第9行代码）的 Host，比如我的：</p>
 
-<pre><code>git clone git@photo.github.com:your-account/your-prj.git
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@photo.github.com:your-account/your-prj.git
+</code></pre></div></div>
 
 <p>如果你想克隆时指定目录名称：</p>
 
-<pre><code>git clone git@photo.github.com:your-account/your-prj.git DirName
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@photo.github.com:your-account/your-prj.git DirName
+</code></pre></div></div>
 
 <h2 id="8取消全局-用户名邮箱设置进入项目文件夹单独设置">8、取消全局 用户名/邮箱设置，进入项目文件夹单独设置</h2>
 
-<pre><code># 取消全局 用户名/邮箱 配置
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 取消全局 用户名/邮箱 配置
 git config –global –unset user.name
 git config –global –unset user.email
 
@@ -205,7 +205,7 @@ git config –global –unset user.email
 cd YourRepoPath
 git config user.name "You Name"
 git config user.email name@example.com
-</code></pre>
+</code></pre></div></div>
 
 <p>其实很简单，就是去掉 –global 参数就行了</p>
 :ET

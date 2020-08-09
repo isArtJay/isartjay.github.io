@@ -1,4 +1,4 @@
-I"9<h1 id="踩坑用-git-同时管理两个远程仓库">踩坑！用 Git 同时管理两个远程仓库</h1>
+I"y<h1 id="踩坑用-git-同时管理两个远程仓库">踩坑！用 Git 同时管理两个远程仓库</h1>
 
 <p>发现最近网站的访问速度并不理想，因为当时只托管在了 <a href="https://github.com/">GitHub</a> 上，GitHub的服务器在国外，所以导致国内访问服务器的时间比较长。</p>
 
@@ -32,8 +32,8 @@
 
 <h1 id="初始化本地仓库">初始化本地仓库</h1>
 
-<pre><code class="language-shell">git init
-</code></pre>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/14_git-skills/2.png" alt="" /></p>
 
@@ -41,8 +41,8 @@
 
 <p>使用多个远程库时，要注意 Git 给远程库起的默认名称是 origin，如果有多个远程库，我们需要用不同的名称来标识不同的远程库，首先要删除已关联的名为 origin 的远程库：</p>
 
-<pre><code>git remote rm origin
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote rm origin
+</code></pre></div></div>
 
 <p>如果输入后显示如下图所示：fatal: No such remote: origin ，说明你本地项目没有已关联的名为 origin 的远程库，那么你可以忽略此步。</p>
 
@@ -50,11 +50,11 @@
 
 <h1 id="配置git用户名和邮箱">配置Git用户名和邮箱</h1>
 
-<pre><code>git config user.name "lien"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config user.name "lien"
+</code></pre></div></div>
 
-<pre><code>git config user.email "artjay.code@gmail.com"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config user.email "artjay.code@gmail.com"
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/14_git-skills/8.png" alt="" /></p>
 
@@ -64,15 +64,15 @@
 
 <p>注意，远程库的名称叫 github，不叫 origin 了！</p>
 
-<pre><code>git remote add github git@github.com:isArtJay/test.git
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add github git@github.com:isArtJay/test.git
+</code></pre></div></div>
 
 <h1 id="关联coding远程库">关联Coding远程库</h1>
 
 <p>同样注意，远程库的名称叫 coding，不叫 origin 了！</p>
 
-<pre><code>git remote add coding git@e.coding.net:liencn/lien/test.git
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add coding git@e.coding.net:liencn/lien/test.git
+</code></pre></div></div>
 
 <p>现在，我们用 git remote -v 查看远程库信息，可以看到两个远程库：</p>
 
@@ -82,15 +82,15 @@
 
 <p>添加文件到本地仓库，其中  <strong>.</strong>  的意思是本地项目目录中的所有文件：</p>
 
-<pre><code>git add .
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+</code></pre></div></div>
 
 <h1 id="提交文件">提交文件</h1>
 
 <p>-m 后的参数是你的提交信息，可以随意填写：</p>
 
-<pre><code>git commit -m "First commit"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "First commit"
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/14_git-skills/10.png" alt="" /></p>
 
@@ -98,15 +98,15 @@
 
 <p>如果要 push 到 GitHub，使用命令：</p>
 
-<pre><code>git push github master
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push github master
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/14_git-skills/11.png" alt="" /></p>
 
 <p>如果要 push 到 Coding，使用命令：</p>
 
-<pre><code>git push coding master
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push coding master
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/14_git-skills/12.png" alt="" /></p>
 

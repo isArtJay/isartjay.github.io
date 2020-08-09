@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "CSS scroll-behavior属性实现平滑滚动"
-tags: archives
+layout: post
 ---
 
 # CSS scroll-behavior属性实现平滑滚动

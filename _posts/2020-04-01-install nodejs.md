@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "Node.js 的安装与配置"
-tags: archives
+layout: post
 ---
 
 # 下载及安装

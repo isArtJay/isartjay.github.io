@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "GitHub Pages 建站"
-tags: archives
+layout: post
 ---
 
 

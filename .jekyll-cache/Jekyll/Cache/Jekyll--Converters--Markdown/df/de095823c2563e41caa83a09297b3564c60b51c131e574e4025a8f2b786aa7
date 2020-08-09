@@ -1,4 +1,4 @@
-I"�<h1 id="一mongodb简介">一、MongoDB简介</h1>
+I" <h1 id="一mongodb简介">一、MongoDB简介</h1>
 
 <p>MongoDB 是一个基于分布式文件存储的数据库，由 C++ 语言编写，旨在为WEB应用提供可扩展的高性能数据存储解决方案。</p>
 
@@ -48,8 +48,8 @@
 
 <p>这里会出现报错信息：</p>
 
-<pre><code>Service 'MongoDB Server'(MongoDB)failed to start. Verify that you have sufficient privileges to start system services.
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Service 'MongoDB Server'(MongoDB)failed to start. Verify that you have sufficient privileges to start system services.
+</code></pre></div></div>
 
 <p>解决办法就是：直接点 <strong>Ignore</strong>（忽略）就可以了，后边配置的时候会解决这个问题！</p>
 
@@ -87,8 +87,8 @@
 
 <p>这是因为我们还没有启动 MongoDB 服务，自然也就连接不上服务了。那要怎么启动呢？在 cmd 窗口中运行如下命令：</p>
 
-<pre><code> mongod --dbpath D:\mongodb\data\db
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mongod --dbpath D:\mongodb\data\db
+</code></pre></div></div>
 
 <p>需要注意的是：如果你没有提前创建db文件夹，是无法启动成功的。运行成功之后，我们打开浏览器，输入<strong>127.0.0.1:27017</strong>，看到如下图，就说明 MongoDB 服务已经成功启动了。</p>
 
@@ -100,8 +100,8 @@
 
 <p>还是打开 cmd 窗口，不过这次是以管理员身份运行，然后输入如下命令：</p>
 
-<pre><code>mongod --dbpath "D:\mongodb\data\db" --logpath "D:\mongodb\data\log\mongo.log" -install -serviceName "MongoDB"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongod --dbpath "D:\mongodb\data\db" --logpath "D:\mongodb\data\log\mongo.log" -install -serviceName "MongoDB"
+</code></pre></div></div>
 
 <p>如果没有报错的话就说明成功添加到服务里了，可以使用 win+R 然后输入 services.msc 命令进行查看：</p>
 
@@ -117,8 +117,8 @@
 
 <p>2）再运行一次配置服务的命令：</p>
 
-<pre><code>mongod --dbpath "D:\mongodb\data\db" --logpath "D:\mongodb\data\log\mongo.log" -install -serviceName "MongoDB"
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongod --dbpath "D:\mongodb\data\db" --logpath "D:\mongodb\data\log\mongo.log" -install -serviceName "MongoDB"
+</code></pre></div></div>
 
 <p>然后再运行 net start mongodb，服务启动成功：</p>
 

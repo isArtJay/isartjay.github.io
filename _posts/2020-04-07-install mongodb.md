@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "windows下安装 MongoDB"
-tags: archives
+layout: post
 ---
 
 # 一、MongoDB简介

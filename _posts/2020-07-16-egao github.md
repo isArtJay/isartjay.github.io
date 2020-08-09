@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "恶搞 GitHub 贡献图"
-tags: archives
+layout: post
 ---
 
 最近读到一篇趣文，各种恶搞 Github 的『Public contributions』，下面截取几个小伙伴的战绩：

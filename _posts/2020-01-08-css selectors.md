@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "CSS 常用伪类和伪元素"
-tags: archives
+layout: post
 ---
 
 # CSS 常用伪类和伪元素

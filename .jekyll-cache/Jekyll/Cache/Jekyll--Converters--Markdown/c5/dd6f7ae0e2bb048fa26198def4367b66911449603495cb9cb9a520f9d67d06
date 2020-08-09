@@ -1,4 +1,4 @@
-I"}<p>最近读到一篇趣文，各种恶搞 Github 的『Public contributions』，下面截取几个小伙伴的战绩：</p>
+I"�<p>最近读到一篇趣文，各种恶搞 Github 的『Public contributions』，下面截取几个小伙伴的战绩：</p>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/01.jpg" alt="" /></p>
 
@@ -10,8 +10,8 @@
 
 <p>直接 clone：</p>
 
-<pre><code class="language-shell">git clone git@github.com:gelstudios/gitfiti.git
-</code></pre>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:gelstudios/gitfiti.git
+</code></pre></div></div>
 
 <p>或者点击 Github 页面的下载链接将整个项目下载到本地：</p>
 
@@ -25,8 +25,8 @@
 
 <p>下载到本地后在命令行中运行 gitfiti.py，显出欢迎界面，此时第一条交互信息不用填写什么内容，直接回车即可。</p>
 
-<pre><code class="language-shell">python gitfiti.py
-</code></pre>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python gitfiti.py
+</code></pre></div></div>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/egao/04.jpg" alt="" /></p>
 
@@ -80,13 +80,13 @@
 
 <p>①：生成的 shell 脚本没有运行权限。先运行一下 chmod 777 gitfiti.sh 即可。</p>
 
-<pre><code class="language-shell">chmod 777 gitfiti.sh
-</code></pre>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>777 gitfiti.sh
+</code></pre></div></div>
 
 <p>②：push 不成功，一般是因为新 repo 里面已经有文件，push 产生冲突。可以打开 gitfiti.sh，把最后一行改为下面这句就行：</p>
 
-<pre><code class="language-shell">git push -f -u origin master    //如果有冲突强制合并
-</code></pre>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">-f</span> <span class="nt">-u</span> origin master    //如果有冲突强制合并
+</code></pre></div></div>
 
 <h1 id="十取消">十、取消</h1>
 

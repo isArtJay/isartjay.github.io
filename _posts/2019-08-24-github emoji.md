@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "整理了一些表情符号"
-tags: archives
+layout: post
 ---
 
 # 整理了一些表情符号

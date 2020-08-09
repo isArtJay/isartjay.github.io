@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "为网站添加评论模块"
-tags: archives
+layout: post
 ---
 
 # 为网站添加评论模块

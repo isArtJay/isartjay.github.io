@@ -1,9 +1,0 @@
----
-layout: Project
-title: Project
----
-
-
-
-​                                
-

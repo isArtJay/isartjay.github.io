@@ -1,20 +1,35 @@
-permalink: /:year:month:day/:title
-url: https://www.lien.run/
-baseurl:
+title: "乐园"
+author: "Yujie Bian"
+description: '边玉杰的技术博客'
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+date_format: "%Y-%m-%d"
 
-name: Lien
-description: 边玉杰的技术博客
-google_verification: null
+# Layout
 
-include: [".htaccess"]
-exclude: ["README.md", "LICENSE"]
+sidebar: false # show a sidebar instead of the usual header
+show_excerpts: false # show article excerpts on the home page
+show_related: false # show the previous and next links after every post
+show_description: false # show the site description in the sidebar
+show_title: false # always keep the site title visible
 
-sass:
-  style: :compressed
-  sass_dir: _sass
+# Styling
 
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    disable: true
+dark_header: false # always keep the header dark
+minimal: false # use simpler style
+
+# Menu
+
+navigation:
+  - { file: "README.md", icon: address-card }
+
+external: # see http://fontawesome.com/icons
+#  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
+#  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
+#  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+comments:
+#  disqus_shortname: ""      # see https://disqus.com/
+#  isso_domain: ""           # see https://posativ.org/isso/
+

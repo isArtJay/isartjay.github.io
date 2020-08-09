@@ -1,4 +1,4 @@
-I"l<h1 id="css-scroll-behavior属性实现平滑滚动">CSS scroll-behavior属性实现平滑滚动</h1>
+I"0<h1 id="css-scroll-behavior属性实现平滑滚动">CSS scroll-behavior属性实现平滑滚动</h1>
 
 <p>你有没有遇到过这样的需求：点击一个链接（内链）跳转到当前页面的某个部分。</p>
 
@@ -18,121 +18,121 @@
 
 <p><strong>Demo</strong></p>
 
-<pre><code class="language-html">&lt;h1&gt;目录&lt;/h1&gt;
-&lt;ul id="top"&gt;
-  &lt;li&gt;&lt;a href="#a"&gt;第一段&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#b"&gt;第二段&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#c"&gt;第三段&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#d"&gt;第四段&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="a"&gt;第一段：&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
-&lt;h2 id="b"&gt;第二段&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
-&lt;h2 id="c"&gt;第三段&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
-&lt;h2 id="d"&gt;第四段&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-  &lt;li&gt;这是一句话&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a href="#top"&gt;回到顶部&lt;/a&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>目录<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"top"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#a"</span><span class="nt">&gt;</span>第一段<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#b"</span><span class="nt">&gt;</span>第二段<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#c"</span><span class="nt">&gt;</span>第三段<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#d"</span><span class="nt">&gt;</span>第四段<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"a"</span><span class="nt">&gt;</span>第一段：<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>回到顶部<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"b"</span><span class="nt">&gt;</span>第二段<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>回到顶部<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"c"</span><span class="nt">&gt;</span>第三段<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>回到顶部<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"d"</span><span class="nt">&gt;</span>第四段<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>这是一句话<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>回到顶部<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">html {scroll-behavior: smooth;}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span><span class="py">scroll-behavior</span><span class="p">:</span> <span class="n">smooth</span><span class="p">;}</span>
+</code></pre></div></div>
 
 <p><strong>效果示例</strong></p>
 

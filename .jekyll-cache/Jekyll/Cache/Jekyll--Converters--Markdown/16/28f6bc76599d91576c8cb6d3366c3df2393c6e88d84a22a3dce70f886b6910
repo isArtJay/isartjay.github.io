@@ -1,4 +1,4 @@
-I"�K<h1 id="css-常用伪类和伪元素">CSS 常用伪类和伪元素</h1>
+I"ͪ<h1 id="css-常用伪类和伪元素">CSS 常用伪类和伪元素</h1>
 
 <h1 id="伪类">伪类</h1>
 
@@ -12,46 +12,46 @@
 
 <p>:first-child  表示在一组兄弟元素中的第一个元素</p>
 
-<pre><code class="language-html">/* 所有正方形都没有背景色，因为此时选中的是 &lt;p&gt; 标签*/
-&lt;div class="list"&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* 所有正方形都没有背景色，因为此时选中的是 <span class="nt">&lt;p&gt;</span> 标签*/
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:first-child{
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:first-child</span><span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/2.png" alt="img" /></p>
 
-<pre><code class="language-html">/* 第 1 个正方形有背景色，因为此时选中的是第一个 .square */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* 第 1 个正方形有背景色，因为此时选中的是第一个 .square */
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:first-child{
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:first-child</span><span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -61,25 +61,25 @@
 
 <p>:first-of-type 表示一组兄弟元素中指定类型的第一个元素</p>
 
-<pre><code class="language-html">/* :first-of-type 选择在父元素中第一个出现的 .square
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* :first-of-type 选择在父元素中第一个出现的 .square
 而不管其在兄弟内的位置如何，第一个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:first-of-type{
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:first-of-type</span><span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -89,24 +89,24 @@
 
 <p>:last-child 表示在一组兄弟元素中的最后一个元素（类似 :first-child）</p>
 
-<pre><code class="language-html">/* :last-child 此时选中的是最后一个 .square
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* :last-child 此时选中的是最后一个 .square
 最后一个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:last-child{
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:last-child</span><span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -116,24 +116,24 @@
 
 <p>:last-of-type 表示一组兄弟元素中指定类型的最后一个元素（类似 :first-of-type）</p>
 
-<pre><code class="language-html">/* :last-of-type 选择在父元素中最后一个出现的 .square
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* :last-of-type 选择在父元素中最后一个出现的 .square
 而不管其在兄弟内的位置如何，最后一个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:last-of-type{
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:last-of-type</span><span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -143,23 +143,23 @@
 
 <p>:not 一个否定伪类，用于匹配不符合参数选择器的元素</p>
 
-<pre><code class="language-html">/* 不含有 .not 的正方形有背景色*/
-&lt;div class="list"&gt;
-     &lt;div class="square not"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square not"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* 不含有 .not 的正方形有背景色*/
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square not"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square not"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:not(.not){
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.not</span><span class="o">)</span><span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -171,46 +171,46 @@
 
 <h3 id="6-1nth-child4-匹配位置为-4-的元素">6-1、:nth-child(4) 匹配位置为 4 的元素</h3>
 
-<pre><code class="language-html">/*第 3 个正方形有背景色 因为第 3 个正方形在所有兄弟元素中排第 4 */
-&lt;div class="list"&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*第 3 个正方形有背景色 因为第 3 个正方形在所有兄弟元素中排第 4 */
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-child(4) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
 <p><img src="https://lien-1258580758.cos.ap-shanghai.myqcloud.com/blog-img/11_css-selectors/8.png" alt="img" /></p>
 
-<pre><code class="language-html"> /*此时第 4 个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> /*此时第 4 个正方形有背景色 */
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-child(4) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -218,23 +218,23 @@
 
 <h3 id="6-2nth-child2n-匹配位置为2-468-的元素可以使用-nth-childeven-代替">6-2、:nth-child(2n) 匹配位置为2、 4、6、8… 的元素，可以使用 :nth-child(even) 代替</h3>
 
-<pre><code class="language-html">/*第 2、 4、6、8 个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*第 2、 4、6、8 个正方形有背景色 */
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-child(2n) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -242,23 +242,23 @@
 
 <h3 id="6-3nth-child2n1-匹配位置为1-357-的元素可以使用-nth-childodd-代替">6-3、:nth-child(2n+1) 匹配位置为1、 3、5、7… 的元素，可以使用 :nth-child(odd) 代替</h3>
 
-<pre><code class="language-html">/*第 1、 3、5、7 个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*第 1、 3、5、7 个正方形有背景色 */
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-child(2n+1) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -266,23 +266,23 @@
 
 <h3 id="6-4nth-child3n-匹配位置为-369-的元素">6-4、:nth-child(3n) 匹配位置为 3、6、9… 的元素</h3>
 
-<pre><code class="language-html">/*第 3、6 个正方形有背景色 */
-&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*第 3、6 个正方形有背景色 */
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-child(3n) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3n</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -292,23 +292,23 @@
 
 <p>:nth-of-type 与 nth-child 相似，不同之处在于它是只匹配特定类型的元素</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt; 
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span> 
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-of-type(4) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -318,23 +318,23 @@
 
 <p>:nth-last-child 与 nth-child 相似，它是从最后一个子元素开始计数的</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-last-child(4) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-last-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -344,23 +344,23 @@
 
 <p>:nth-last-of-type 与 nth-of-type 相似，不同之处在于它是从最后一个子元素开始计数的</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">.square:nth-last-of-type(4) {
-     background: orangered;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.square</span><span class="nd">:nth-last-of-type</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span>
+     <span class="nl">background</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -374,23 +374,23 @@
 
 <p>使用 ::after 会创建一个伪元素，该伪元素会成为选中元素的最后一个子元素</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">p::after{
-     content: "✨✨";
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nd">::after</span><span class="p">{</span>
+     <span class="nl">content</span><span class="p">:</span> <span class="s1">"✨✨"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -400,23 +400,23 @@
 
 <p>使用 ::before 会创建一个伪元素，该伪元素会成为选中元素的第一个子元素</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">p::before{
-     content: "✨✨";
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nd">::before</span><span class="p">{</span>
+     <span class="nl">content</span><span class="p">:</span> <span class="s1">"✨✨"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -426,23 +426,23 @@
 
 <p>::first-letter 选中某块级元素第一行的第一个字母，并且文字所处的行之前没有其他内容</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">p::first-letter{
-     color: red;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nd">::first-letter</span><span class="p">{</span>
+     <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -452,23 +452,23 @@
 
 <p>::first-line 在某块级元素的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。和其他所有的伪元素一样，::first-line 不能匹配任何真实存在的 html 元素。::first-line 伪元素只能在块容器中，所以，::first-line 伪元素只能在一个 display 值为 block,，inline-block，table-cell 或者 table-caption 中有用</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">p::first-line{
-     color: red;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nd">::first-line</span><span class="p">{</span>
+     <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>效果如下：</p>
 
@@ -478,23 +478,23 @@
 
 <p>::selection 用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）</p>
 
-<pre><code class="language-html">&lt;div class="list"&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;div class="square"&gt;&lt;/div&gt;
-     &lt;p&gt;.square 这是一个p标签&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"square"</span><span class="nt">&gt;&lt;/div&gt;</span>
+     <span class="nt">&lt;p&gt;</span>.square 这是一个p标签<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<pre><code class="language-css">p::selection{
-     background-color: #ffeb3b;
-}
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nd">::selection</span><span class="p">{</span>
+     <span class="nl">background-color</span><span class="p">:</span> <span class="m">#ffeb3b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>使用鼠标选中亮字，效果图：</p>
 

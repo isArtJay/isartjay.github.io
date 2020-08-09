@@ -1,4 +1,4 @@
-I"�<h1 id="为网站添加评论模块">为网站添加评论模块</h1>
+I"g<h1 id="为网站添加评论模块">为网站添加评论模块</h1>
 
 <p>由于 Disqus 对于国内网路的支持十分糟糕，所以我选择了 <a href="https://gitalk.github.io/">Gitalk</a></p>
 
@@ -26,32 +26,32 @@
 
 <p>直接引入下面两个文件：</p>
 
-<pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"&gt;&lt;/script&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
 
 <h1 id="使用">使用</h1>
 
 <p>1、在适合的位置添加一个容器：</p>
 
-<pre><code class="language-html">&lt;div id="gitalk-container"&gt;&lt;/div&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"gitalk-container"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
 
 <p>2、用下面的 Javascript 代码来生成 Gitalk 插件：</p>
 
-<pre><code class="language-javascript">&lt;script&gt;
-    var gitalk = new Gitalk({
-      clientID: '',	
-      clientSecret: '',	
-      repo: '',	
-      owner: '',	
-      admin: [''],	
-      id: location.pathname,	
-      distractionFreeMode: false})
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+    <span class="kd">var</span> <span class="nx">gitalk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gitalk</span><span class="p">({</span>
+      <span class="na">clientID</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>	
+      <span class="na">clientSecret</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>	
+      <span class="na">repo</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>	
+      <span class="na">owner</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>	
+      <span class="na">admin</span><span class="p">:</span> <span class="p">[</span><span class="dl">''</span><span class="p">],</span>	
+      <span class="na">id</span><span class="p">:</span> <span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">,</span>	
+      <span class="na">distractionFreeMode</span><span class="p">:</span> <span class="kc">false</span><span class="p">})</span>
 
-    gitalk.render('gitalk-container')
-&lt;/script&gt;
-</code></pre>
+    <span class="nx">gitalk</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="dl">'</span><span class="s1">gitalk-container</span><span class="dl">'</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre></div></div>
 
 <p>3、配置参数（必选）</p>
 

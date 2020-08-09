@@ -1,4 +1,4 @@
-I"-<h1 id="picture-in-picture-画中画">Picture-in-Picture 画中画</h1>
+I"<(<h1 id="picture-in-picture-画中画">Picture-in-Picture 画中画</h1>
 
 <p>这个 API 允许网页创建一个浮动的视频播放小窗口，它会一直显示在其他窗口的最前面，这样用户就可以继续观看视频，同时他们也可以继续浏览其他网页或继续操作其他应用程序。</p>
 
@@ -14,7 +14,7 @@
 
 <p>在演示 Demo 中可以看到，Chrome 在原生的 video 控件中提供了开启画中画模式的菜单项，一旦开启画中画模式，原本页面中内联（inline）展现的那个 video 还占据着原来的位置，各种控件也都在，但最重要的视频画面已经被无缝的转移到了新的弹出窗口中了，只剩下一张 poster 图片和一层灰色的遮罩。</p>
 
-<p>我们把弹出的那个视频窗口叫做 PiP 窗口，PiP 窗口只有视频画面，没有标题栏和地址栏（chrome-less），这一点和用 <code>window.open()</code>打开的弹窗不一样。同时，PiP 窗口也没有完整的视频控件，只有开始/暂停/关闭/返回到标签页四个按钮，时间、进度条、音量这些控件都没有。PiP 窗口还支持拖拽改变大小（不能大于一个象限），以及支持拖拽到任意位置。还有最重要的一点是，PiP 窗口在所有窗口中是置顶的（always on top）。</p>
+<p>我们把弹出的那个视频窗口叫做 PiP 窗口，PiP 窗口只有视频画面，没有标题栏和地址栏（chrome-less），这一点和用 <code class="highlighter-rouge">window.open()</code>打开的弹窗不一样。同时，PiP 窗口也没有完整的视频控件，只有开始/暂停/关闭/返回到标签页四个按钮，时间、进度条、音量这些控件都没有。PiP 窗口还支持拖拽改变大小（不能大于一个象限），以及支持拖拽到任意位置。还有最重要的一点是，PiP 窗口在所有窗口中是置顶的（always on top）。</p>
 
 <p>但是，在同一时刻只能允许有一个 PiP 窗口。同一个页面里如果为多个视频开启画中画模式，前面开启的那个会自动退出画中画模式，同一个浏览器窗口下的多个 Tab 里的视频亦如此，同一个浏览器打开的多个浏览器窗口亦如此。</p>
 
@@ -24,15 +24,15 @@
 
 <p>请求让该 video 元素进入画中画模式，返回一个 promise，如果没有异常，这个 promise 包的值会是一个 PictureInPictureWindow 对象，这个对象就代表弹出的那个 PiP 窗口，后面会单独讲它的 API。</p>
 
-<pre><code class="language-javascript">async function openPiP(video) {
-  try {
-    const pipWindow = await video.requestPictureInPicture() // 进入画中画模式
-    ...
-  } catch (e) {
-    console.error(e) // 处理异常
-  }
-})
-</code></pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">openPiP</span><span class="p">(</span><span class="nx">video</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">pipWindow</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">video</span><span class="p">.</span><span class="nx">requestPictureInPicture</span><span class="p">()</span> <span class="c1">// 进入画中画模式</span>
+    <span class="p">...</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="c1">// 处理异常</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
 
 <p>哪些情况下进入画中画模式会失败？一共有 5 种情况：</p>
 
@@ -50,24 +50,24 @@
 
 <p>通过 HTML 属性：</p>
 
-<pre><code class="language-html">&lt;video src="..." disablePictureInPicture&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">disablePictureInPicture</span><span class="nt">&gt;</span>
+</code></pre></div></div>
 
 <p>通过 DOM 属性:</p>
 
-<pre><code class="language-css">video.disablePictureInPicture = true
-</code></pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">video</span><span class="nc">.disablePictureInPicture</span> <span class="o">=</span> <span class="nt">true</span>
+</code></pre></div></div>
 
 <h2 id="3video-元素新增的事件-enterpictureinpicture-和-leavepictureinpicture">3、video 元素新增的事件 enterpictureinpicture 和 leavepictureinpicture</h2>
 
-<pre><code class="language-javascript">video.addEventListener('enterpictureinpicture', function(pipWindow) {
-  // 进入了画中画模式，可以拿到 pipWindow 对象
-})
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">video</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">enterpictureinpicture</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">pipWindow</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 进入了画中画模式，可以拿到 pipWindow 对象</span>
+<span class="p">})</span>
 
-video.addEventListener('leavepictureinpicture', function() {
-  // 退出了画中画模式
-})
-</code></pre>
+<span class="nx">video</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">leavepictureinpicture</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 退出了画中画模式</span>
+<span class="p">})</span>
+</code></pre></div></div>
 
 <h2 id="4-document-上新增的方法-exitpictureinpicture">4、 document 上新增的方法 exitPictureInPicture()</h2>
 
@@ -87,15 +87,15 @@ video.addEventListener('leavepictureinpicture', function() {
 
 <p>从 requestPictureInPicture() 方法的返回值和 enterpictureinpicture 事件的回调参数中可以拿到 pipWindow 对象，该对象有两个属性 width 和 height，还支持一个 resize 事件，在用户改变 PiP 窗口大小时会触发。</p>
 
-<pre><code class="language-javascript">async function openPiP(video) {
-  const pipWindow = await video.requestPictureInPicture()
-  console.log(pipWindow.width, pipWindow.height) // 打印了默认的窗口大小
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">openPiP</span><span class="p">(</span><span class="nx">video</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">pipWindow</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">video</span><span class="p">.</span><span class="nx">requestPictureInPicture</span><span class="p">()</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pipWindow</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">pipWindow</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="c1">// 打印了默认的窗口大小</span>
 
-  pipWindow.addEventListener('resize', function() {
-    console.log(pipWindow.width, pipWindow.height) // 用户改变 PiP 窗口大小时触发
-  })
-}
-</code></pre>
+  <span class="nx">pipWindow</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">resize</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pipWindow</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">pipWindow</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="c1">// 用户改变 PiP 窗口大小时触发</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>注意这里的 width 和 height 是只读的，你不能通过给他们赋值来改变窗口大小。</p>
 

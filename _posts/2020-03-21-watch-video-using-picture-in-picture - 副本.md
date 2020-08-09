@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "Picture-in-Picture 画中画"
-tags: archives
+layout: post
 ---
 
 # Picture-in-Picture 画中画

@@ -1,7 +1,6 @@
 ---
-layout: default
 title: "分享一下我の学习心得"
-tags: archives
+layout: post
 ---
 
 
