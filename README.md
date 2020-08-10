@@ -16,7 +16,33 @@ Some of my small wishes: make a foreign friend, go to the Mediterranean, open a 
 
 About programming, about the front end, I will always love. May the story not end and youth will not end.
 
+
+
+## Projects
+
+ I’m currently working on [Mouse](https://github.com/isArtJay/Mouse), and here are some small projects I wrote in my spare time:
+
+favicon.svg
+
+date-calculator
+
+page-minimap
+
+typewriter
+
+reward
+
+## Friends' links
+
+Here are other good blogs in my collection. Some are my friends in real life, some I often read, and some are cool.
+
+[LemonFan](https://lemonfan.me/) / [alili](https://alili.tech/) / [overtrue](https://overtrue.me/) / [Evan You](https://evanyou.me/) / [Laruence](http://www.laruence.com/) / [smallyu](https://www.smallyu.net/)
+
+[Cherry`s Blog](http://cherryblog.site/) / [Chen Hui Jing](https://www.chenhuijing.com/) / [CoolShell](https://coolshell.cn/) / [Paul Graham](http://www.paulgraham.com/articles.html)
+
 ## Find me
+
+You can also find me in these places:
 
 [Github](https://github.com/isArtJay) / [Twitter](https://twitter.com/yj_bian) / [Stack Overflow](https://stackoverflow.com/users/11297855/yj-bian) / [Medium](https://medium.com/@yj_bian) / [Telegram](https://t.me/yj_bian)
 
@@ -24,4 +50,4 @@ About programming, about the front end, I will always love. May the story not en
 
 ## Resume
 
-In case you want to check out my résumé, here’s the [PDF](/resume/resume.pdf):
+In case you want to check out my résumé, here’s the [PDF](/resume/resume.pdf)
