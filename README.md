@@ -22,15 +22,15 @@ About programming, about the front end, I will always love. May the story not en
 
  I’m currently working on [Mouse](https://github.com/isArtJay/Mouse), and here are some small projects I wrote in my spare time:
 
-favicon.svg
+[favicon.svg](https://www.lien.run/project/emoji/)
 
-date-calculator
+[date-calculator](https://www.lien.run/project/date-calculator/)
 
-page-minimap
+[page-minimap](https://www.lien.run/project/page-minimap/)
 
-typewriter
+[typewriter](https://www.lien.run/project/typewriter/)
 
-reward
+[reward](https://www.lien.run/project/reward/)
 
 ## Friends' links
 
