@@ -1,3 +1,22 @@
+/* @font-face {
+  font-family: Antaro;
+  src: url("/assets/fonts/Antaro.ttf");
+}
+@font-face {
+  font-family: shufa;
+  src: url("/assets/fonts/HYGuLiW.ttf");
+}
+@font-face {
+  font-family: hanyi;
+  src: url("/assets/fonts/HYShangWeiXiaoWanTongW.ttf");
+}
+
+body {
+  font-family: shufa;
+  font-weight: 500;
+  font-size: 18px;
+} */
+
 .uptop {
   position: fixed;
   bottom: -50px;
