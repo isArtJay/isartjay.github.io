@@ -15,7 +15,7 @@ In 2020, many unforgettable things happened, just in August of same year, I crea
 
 I hope that my website is a business card, and people who come here will gain something. I will always love programming and front-end development.
 
-## Me off the net...
+## Anything not related to the web?
 
 Sure. I love photography, I often take a lot of beautiful photos when I travel and then print them out. I think that photos can remember the beauty of people. When I am old, I can find some fond memories of my youth through photos.
 

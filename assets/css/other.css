@@ -39,12 +39,12 @@ body {
     display: none;
   }
 
-  article ul li {
+  .archive li {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  article ul {
+  .archive {
     width: 95%;
   }
 
