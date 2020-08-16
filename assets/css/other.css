@@ -1,0 +1,31 @@
+.uptop {
+  position: fixed;
+  bottom: -50px;
+  right: 30px;
+  width: 50px;
+  z-index: 9999;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.uptop img {
+  width: 80%;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .uptop {
+    display: none;
+  }
+
+  article ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  article ul {
+    width: 95%;
+  }
+}
