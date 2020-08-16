@@ -47,4 +47,8 @@ body {
   article ul {
     width: 95%;
   }
+
+  .related {
+    display: none;
+  }
 }
