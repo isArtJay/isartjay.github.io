@@ -1,19 +1,19 @@
 ---
-title: "About"
-permalink: "/about/"
+title: "关于我"
+permalink: "/about-cn/"
 layout: page
 ---
 
-## I am...
+## 我是...
 
-> A developer.&nbsp;&nbsp;A photographer.&nbsp;&nbsp;A creator.&nbsp;&nbsp;A traveller.
+> 开发者、摄影师、创造者、旅行者
 >
 
-In 2018, I started to build my website, since then, I discovered the existence of a website hosting system and hosted the site on `Github Pages` and `Coding Pages`. But I never have spare time to manage my website, in August 2020, I decided to restart this journey. This website chronicles my experiences as I learn new things, fail spectacularly and make cool stuff along the way.
+2018年，我开始建设自己的网站，并且将它托管在了 `Github Pages` 和 `Coding Pages` 上。但是我一直没时间去打理它，2020年8月，我决定重新开始。这个网站记录了我学习新事物的经历、创造以及失败的过程。
 
-In 2020, many unforgettable things happened, just in August of same year, I created [Mouse.css](https://github.com/isArtJay/Mouse), a CSS3 Hover library, and now run it with my best mate. The idea for Mouse.css was born on May 2020, so far, we had a logo, a [Gitter channel](https://gitter.im/mouse-css/mouse?utm_source=share-link&utm_medium=link&utm_campaign=share-link) and [Telegram group](https://t.me/mouse_chat).
+2020年发生了很多难忘的事情，就在这一年的8月份，我创建了 [Mouse.css](https://github.com/isArtJay/Mouse)，这是一个 CSS 的 Hover 库，而且我和我最好的伙伴在一起开发、运营它。Mouse.css 的想法诞生于2020年的5月份，目前，我们已经有了一个 logo，一个 [Gitter 频道](https://gitter.im/mouse-css/mouse?utm_source=share-link&utm_medium=link&utm_campaign=share-link) 和 [Telegram 群组](https://t.me/mouse_chat)。
 
-I hope that my website is a business card, and people who come here will gain something. I will always love programming and front-end development.
+我希望我的博客是一张名片，来的人都有所收获。我也将一直热爱编程和前端开发。
 
 ## Anything not related to the web?
 
@@ -29,7 +29,9 @@ You can also find me in these places:
 
 [LinkedIn](https://www.linkedin.com/in/bianyujie)  / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
 
-## So how was this site built?
+## 这个网站是怎样建的？
+
+用血、汗水和泪水。哈哈哈哈......开个玩笑。
 
 With blood, sweat and tears! Nah, I’m just kidding.
 
@@ -41,10 +43,6 @@ No PHP, no Go, no Python, nilch.
 
 
 
-## Resume
+## 简历
 
-In case you want to check out my résumé, here’s the [PDF](/resume/resume.pdf).
-
-
-
-<a href="/about-cn">Chinese Page</a>
+如果你想看我的简历，这是 [PDF](/resume/resume.pdf) 文件.
