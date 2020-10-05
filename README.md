@@ -47,4 +47,4 @@ In case you want to check out my résumé, here’s the [PDF](/resume/resume.pdf
 
 
 
-<a href="/about-cn">Chinese Page</a>
+<a href="/about-cn">Chinese Page/中文页面</a>
