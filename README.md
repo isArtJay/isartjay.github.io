@@ -13,7 +13,7 @@ In 2018, I started to build my website, since then, I discovered the existence o
 
 In 2020, many unforgettable things happened, just in August of same year, I created [Mouse.css](https://github.com/isArtJay/Mouse), a CSS3 Hover library, and now run it with my best mate. The idea for Mouse.css was born on May 2020, so far, we had a logo, a [Gitter channel](https://gitter.im/mouse-css/mouse?utm_source=share-link&utm_medium=link&utm_campaign=share-link) and [Telegram group](https://t.me/mouse_chat).
 
-I hope that my website is a business card, and people who come here will gain something. I will always love programming and front-end development.
+I hope that my website is a business card, and people who come here will gain something, youth never ends, the story never ends!
 
 ## Anything not related to the web?
 
