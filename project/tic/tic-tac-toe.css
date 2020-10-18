@@ -1,0 +1,100 @@
+/*
+ * @Author: Bian YuJie 
+ * @Date: 2020-03-31 17:38:50 
+ * @Last Modified by: Bian YuJie
+ * @Last Modified time: 2020-03-31 20:46:47
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
+  user-select: none;
+}
+
+/* 游戏名 */
+.game_name {
+  text-align: center;
+  color: #2e317c;
+  cursor: default;
+  user-select: none;
+}
+
+/* 棋盘布局 */
+.board {
+  user-select: none;
+  height: 300px;
+  position: relative;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, -30px);
+}
+
+.square {
+  color: #2e317c;
+  font-size: 100px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+  cursor: default;
+  user-select: none;
+  background-color: rgba(26, 148, 188, 0.8);
+}
+
+/* 提示消息 */
+#messageBox {
+  user-select: none;
+  width: 300px;
+  text-align: center;
+  color: #2e317c;
+  margin: 40px auto 20px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 25px;
+  line-height: 25px;
+}
+
+/* 控制按钮 */
+
+.controls {
+  text-align: center;
+}
+
+.difficulty,
+.button {
+  overflow: hidden;
+  outline: none;
+  width: 60px;
+  height: 25px;
+  font-size: 16px;
+  border: none;
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: #131824;
+  color: #eef7f2;
+}
+
+.difficulty {
+  cursor: default;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(53, 51, 60, 0.8);
+}
