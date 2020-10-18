@@ -21,14 +21,6 @@ layout: page
 
 小愿望：交一个外国朋友，去地中海，开一家民宿，写一本自己的电子书。写书的目的不是为了出版，而是为了记录自己的故事和经历。
 
-## 足迹
-
-你也可以在这些平台上找到我：
-
-[Github](https://github.com/isArtJay) / [Twitter](https://twitter.com/yj_bian) / [Stack Overflow](https://stackoverflow.com/users/11297855/yj-bian) / [Medium](https://medium.com/@yj_bian)
-
-[LinkedIn](https://www.linkedin.com/in/bianyujie)  / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
-
 ## 这个网站是怎样创建的？
 
 用血、汗水和泪水。哈哈哈哈......开个玩笑。
@@ -39,8 +31,20 @@ layout: page
 
 没有 PHP，没有 Go，没有 Python，什么都没有。
 
+## 足迹
 
+你也可以在这些地方找到我：
+
+[Github](https://github.com/isArtJay) / [Twitter](https://twitter.com/yj_bian) / [Stack Overflow](https://stackoverflow.com/users/11297855/yj-bian) / [Medium](https://medium.com/@yj_bian)
+
+[LinkedIn](https://www.linkedin.com/in/bianyujie)  / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
 
 ## 简历
 
 如果你想看我的简历，这是 [PDF](/resume/resume.pdf) 文件。
+
+## 项目
+
+这里有我在业余时间写的一些[项目](/project)。
+
+<a href="/about"><<<<<<<<<< Introduction to English >>>>>>>>>></a>

@@ -21,14 +21,6 @@ Sure. I love photography, I often take a lot of beautiful photos when I travel a
 
 Some of my small wishes: make a foreign friend, go to the Mediterranean, open a homestay, and write an e-book of my own. The purpose of writing a book isn't to publish, but to record my own stories and experiences. 
 
-## Elsewhere on the interwebs
-
-You can also find me in these places:
-
-[Github](https://github.com/isArtJay) / [Twitter](https://twitter.com/yj_bian) / [Stack Overflow](https://stackoverflow.com/users/11297855/yj-bian) / [Medium](https://medium.com/@yj_bian)
-
-[LinkedIn](https://www.linkedin.com/in/bianyujie)  / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
-
 ## So how was this site built?
 
 With blood, sweat and tears! Nah, I’m just kidding.
@@ -39,12 +31,20 @@ Since Jekyll is a static site generator, everything here is HTML, CSS and JS.
 
 No PHP, no Go, no Python, nilch.
 
+## Elsewhere on the interwebs
 
+You can also find me in these places:
+
+[Github](https://github.com/isArtJay) / [Twitter](https://twitter.com/yj_bian) / [Stack Overflow](https://stackoverflow.com/users/11297855/yj-bian) / [Medium](https://medium.com/@yj_bian)
+
+[LinkedIn](https://www.linkedin.com/in/bianyujie)  / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
 
 ## Resume
 
 In case you want to check out my résumé, here’s the [PDF](/resume/resume.pdf).
 
+## Project
 
+Here are some of the [projects](/project) I've written about in my spare time.
 
-<a href="/about-cn">Chinese Page/中文页面</a>
+<a href="/about-cn"><<<<<<<<<< 中文简介 >>>>>>>>>></a>
