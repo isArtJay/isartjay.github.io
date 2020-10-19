@@ -1,6 +1,7 @@
 {% if include.menu %}
   <nav class="meun_nav">
     <a href="/project">Project</a>
+    <a target="_blank" href="https://github.com/isArtJay">Github</a>
   {% for item in include.menu %}
     {%- assign node = site.pages | where: "name", item.file | first -%}
     {%- assign url = item.url | default: node.url -%}
