@@ -47,4 +47,4 @@ In case you want to check out my résumé, here’s the [PDF](/resume/resume.pdf
 
 Here are some of the [projects](/project) I've written about in my spare time.
 
-<a href="/about-cn"><<<<<<<<<< 中文简介 >>>>>>>>>></a>
+<a href="/about-cn">中文简介</a>

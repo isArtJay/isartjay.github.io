@@ -47,4 +47,4 @@ layout: page
 
 这里有我在业余时间写的一些[项目](/project)。
 
-<a href="/about"><<<<<<<<<< Introduction to English >>>>>>>>>></a>
+<a href="/about">Introduction to English</a>
