@@ -1,6 +1,6 @@
-.gt-comments {
+/* .gt-comments {
   display: none;
-}
+} */
 .gt-container .gt-header-controls-tip {
   font-size: 0.875em;
 }
@@ -27,6 +27,7 @@
 .gt-container .gt-header-textarea:hover {
   background-color: transparent;
 }
+
 .gt-container .gt-header-textarea::placeholder {
   color: grey;
   font-size: 15px;
@@ -49,8 +50,22 @@
   margin-top: 5px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
-#page-comments .gt-container .gt-header-textarea {
+
+.gt-container .gt-comment {
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.gt-container .gt-comment:not(:first-child) {
+  margin-top: 20px;
+}
+
+.gt-container .gt-comment .gt-comment-content {
   background-color: transparent;
-  border: none;
-  border-radius: 0;
+}
+.gt-container .gt-comment-content:hover {
+  box-shadow: none;
 }
