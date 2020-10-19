@@ -164,7 +164,6 @@ body {
     padding: 10px;
   }
   .item:hover {
-    border: none;
     box-shadow: none;
     transition: none;
   }
