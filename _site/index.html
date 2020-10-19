@@ -26,7 +26,7 @@
 
 
 <link rel="stylesheet" href="/assets/css/other.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <header class="icons">
   
     <a href="/" class="title">Yujie</a>
@@ -111,6 +111,20 @@
  
 
 
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+  clientID: '34ca7a5b86b6abbc9e7d',
+  clientSecret: '445aec84b0c690c5219a1a0a016c107d8a1aa8e3',
+  repo: 'blog-comment',      
+  owner: 'isArtJay',
+  admin: ['isArtJay'],
+  id: location.pathname,     
+  distractionFreeMode: false  
+})
+
+gitalk.render('gitalk-container')
+</script>
 
 <script>
 window.onload = function () {
