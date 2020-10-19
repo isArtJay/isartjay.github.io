@@ -1,5 +1,5 @@
 ---
-title: "说说我在博客上花了多少心血"
+title: "博客与写作"
 layout: post
 ---
 

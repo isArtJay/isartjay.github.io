@@ -1,5 +1,5 @@
 ---
-title: "分享一下我の学习心得"
+title: "我の学习心得"
 layout: post
 ---
 

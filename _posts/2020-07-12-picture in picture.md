@@ -1,5 +1,5 @@
 ---
-title: "Picture-in-Picture 画中画"
+title: "Picture in Picture"
 layout: post
 ---
 
