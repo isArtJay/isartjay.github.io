@@ -1,0 +1,56 @@
+.gt-comments {
+  display: none;
+}
+.gt-container .gt-header-controls-tip {
+  font-size: 0.875em;
+}
+.gt-container .gt-ico-text {
+  margin-left: 0.3125em;
+}
+.gt-container .gt-ico-text,
+.gt-ico-tip .gt-svg svg {
+  color: #000;
+  opacity: 0.5;
+  font-weight: 700;
+}
+.gt-container .gt-svg svg {
+  fill: #000;
+}
+.gt-container .gt-header-textarea {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  color: grey;
+  outline: none;
+  font-family: "微软雅黑";
+}
+.gt-container .gt-header-textarea:hover {
+  background-color: transparent;
+}
+.gt-container .gt-header-textarea::placeholder {
+  color: grey;
+  font-size: 15px;
+  font-family: "微软雅黑";
+}
+#gitalk-container {
+  box-shadow: 0 0 0.6em rgba(28, 29, 34, 0.05);
+  border-top: 1px solid rgba(142, 142, 145, 0.16);
+  padding: 1.75em calc(38% - 12em) 4em;
+}
+.gt-container .gt-link-counts,
+.gt-container .gt-link-counts:hover {
+  border: none;
+}
+.gt-container .gt-header {
+  padding: 20px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 3px;
+  margin-top: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+#page-comments .gt-container .gt-header-textarea {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
