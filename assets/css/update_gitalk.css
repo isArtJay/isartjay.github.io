@@ -42,6 +42,9 @@
 .gt-container .gt-link-counts:hover {
   border: none;
 }
+.gt-container .gt-link-counts {
+  font-weight: 700;
+}
 .gt-container .gt-header {
   padding: 20px;
   background: white;
@@ -68,4 +71,14 @@
 }
 .gt-container .gt-comment-content:hover {
   box-shadow: none;
+}
+
+.gt-container .gt-header-controls .gt-btn {
+  background: 0;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+.gt-container .gt-header-controls .gt-btn:hover {
+  background-color: #fafafa;
 }
