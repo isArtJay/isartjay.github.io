@@ -7,7 +7,6 @@ layout: page
 ## I am...
 
 > A developer.&nbsp;&nbsp;A photographer.&nbsp;&nbsp;A creator.&nbsp;&nbsp;A traveller.
->
 
 In 2018, I started to build my website, since then, I discovered the existence of a website hosting system and hosted the site on `Github Pages` and `Coding Pages`. But I never have spare time to manage my website, in August 2020, I decided to restart this journey. This website chronicles my experiences as I learn new things, fail spectacularly and make cool stuff along the way.
 
@@ -19,7 +18,7 @@ I hope that my website is a business card, and people who come here will gain so
 
 Sure. I love photography, I often take a lot of beautiful photos when I travel and then print them out. I think that photos can remember the beauty of people. When I am old, I can find some fond memories of my youth through photos.
 
-Some of my small wishes: make a foreign friend, go to the Mediterranean, open a homestay, and write an e-book of my own. The purpose of writing a book isn't to publish, but to record my own stories and experiences. 
+Some of my small wishes: make a foreign friend, go to the Mediterranean, open a homestay, and write an e-book of my own. The purpose of writing a book isn't to publish, but to record my own stories and experiences.
 
 ## So how was this site built?
 
@@ -37,7 +36,7 @@ You can also find me in these places:
 
 [Github](https://github.com/isArtJay) / [Twitter](https://twitter.com/yj_bian) / [Stack Overflow](https://stackoverflow.com/users/11297855/yj-bian) / [Medium](https://medium.com/@yj_bian)
 
-[LinkedIn](https://www.linkedin.com/in/bianyujie)  / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
+[LinkedIn](https://www.linkedin.com/in/bianyujie) / [Telegram](https://t.me/yj_bian) / [Weibo](https://weibo.com/artjay) / [Email](mailto:bianyujie@lien.run)
 
 ## Resume
 
