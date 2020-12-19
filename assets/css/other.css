@@ -17,6 +17,13 @@ body {
   font-size: 18px;
 } */
 
+.words_count,
+.reading_time {
+  color: #8e8e91;
+}
+.words_count {
+  margin-left: 20px;
+}
 .uptop {
   position: fixed;
   bottom: -50px;
