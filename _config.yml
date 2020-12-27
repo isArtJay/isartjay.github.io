@@ -33,3 +33,7 @@ comments:
 #  disqus_shortname: ""      # see https://disqus.com/
 #  isso_domain: ""           # see https://posativ.org/isso/
 
+leancloud:
+  enable: true
+  app_id: pw0nieqXlqUOhzkHb7cvhyMk-gzGzoHsz
+  app_key: LclsM5QjyGfhdzc8Ur8YiNDV
