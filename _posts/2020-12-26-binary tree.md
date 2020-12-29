@@ -1,5 +1,5 @@
 ---
-title: "遍历一颗二叉树"
+title: "Binary tree traversal"
 layout: post
 ---
 
